@@ -1,0 +1,8 @@
+{
+  "name": "VirtuWeather",
+  "version": "0.0.0",
+  "dependencies": {
+    "angular": "~1.3.16",
+    "angular-route": "~1.3.16",
+  }
+}
