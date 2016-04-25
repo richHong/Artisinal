@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <base href="/">
+
+  <title>Artisanal</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="libs/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css"> <!-- custom styles -->
+
+  <!-- JS -->
+  <script src="libs/angular/angular.min.js"></script>
+  <script src="libs/angular-route/angular-route.min.js"></script>
+
+  <!-- ANGULAR CUSTOM insert controller and services files below-->
+ <!--  <script src="INSERT CONTROLLER/SERVICES FILES"></script> -->
+ 
+</head>
+<body ng-app="App" ng-controller="">
+<div class="container">
+  
+  <!-- HEADER -->
+  <nav class="navbar navbar-inverse">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="/">Artisanal</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li><a href="/nerds">Users</a></li>
+      <li><a href="/geeks">Businesses</a></li>
+    </ul>
+  </nav>
+
+  <!-- ANGULAR DYNAMIC CONTENT -->
+  <div ng-view></div>
+
+</div>
+</body>
+</html>
