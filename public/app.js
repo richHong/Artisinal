@@ -1,3 +1,4 @@
-angular.module('ArtisanApp',
+angular.module('ArtisanalApp',
   ['appRoutes',
-   'RegController']);
+   'RegController',
+  'MainController']);
