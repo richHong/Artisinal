@@ -1,3 +1,5 @@
+// var mongoose = require('mongoose');
+var Business  = require('./models/bModel.js');
 
 module.exports = function(app){
 
@@ -15,14 +17,14 @@ app.get('/api/business', function(req, res){
 app.post('/api/business', function(req, res){
   //create new instance of the business model and add properties to new instance
   var newBusiness = new Business();
-  newBusiness.name: req.body.name,
-  newBusiness.address: req.body.address,
-  newBusiness.phoneNumber: req.body.phoneNumber,
-  newBusiness.email: req.body.email,
-  newBusinesss.description: req.body.description,
-  newBusiness.picture: req.body.picture,
-  newBusiness.menu: req.body.menu,
-  newBusiness.link: req.body.link
+  newBusiness.name = req.body.name,
+  newBusiness.address = req.body.address,
+  newBusiness.phoneNumber = req.body.phoneNumber,
+  newBusiness.email = req.body.email,
+  newBusiness.description =  req.body.description,
+  newBusiness.picture = req.body.picture,
+  newBusiness.menu =  req.body.menu,
+  newBusiness.link = req.body.link
 
   //save the newly created model into the database
   newBusiness.save(function(err, newBusiness){
