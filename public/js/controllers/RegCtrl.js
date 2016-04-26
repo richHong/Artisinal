@@ -1,6 +1,6 @@
 angular.module('RegCtrl', [])
 
-.controller('RegController', function($scope) {
+.controller('RegController', function($scope, RegFactory) {
   $scope = {
     company: '',
     specialty: '',
@@ -10,4 +10,9 @@ angular.module('RegCtrl', [])
     description: '',
     url: ''
   };
+
+  $scope.registerBusiness = function(busName, busAddress, busPhone, busEmail, busWebsiteLink, busPic, busMenu, busDescription) {
+    RegFactory.addBusiness(busName, busAddress, busPhone, busEmail, busWebsiteLink, busPic, busMenu, busDescription);
+  }
+
 });
