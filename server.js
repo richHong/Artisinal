@@ -4,9 +4,9 @@ var express = require('express');
 var app = express();
 var mongoose = require('mongoose');
 var bodyParser = require('body-parser');
-// var db = require('./config/db.js');
 
-mongoose.connect('mongodb://localhost/dbName');
+
+mongoose.connect('mongodb://localhost/Artisanal');
 
 // CONFIG----------------------------------------
 //-----------------------------------------------
@@ -16,7 +16,7 @@ var db = require('./config/db');
 var port = process.env.PORT || 8080;
 
 // connect to our mongoDB database
-mongoose.connect(db.url);
+// mongoose.connect(db.url);
 
 app.use(bodyParser.json());
 
