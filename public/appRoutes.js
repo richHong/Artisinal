@@ -2,6 +2,8 @@ angular.module('appRoutes', [])
 
 .config(['$routeProvider',
   function($routeProvider) {
+
+    These
     $routeProvider
       .when('/', {
         templateUrl: 'views/viewIndex.html',
@@ -10,6 +12,9 @@ angular.module('appRoutes', [])
       .when('/register', {
         templateUrl: 'views/',
         controller: 'RegController'
+      })
+      .when('/profile', {
+        templateUrl: 'views/'
       });
   }
 ]);
