@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <base href="/">
+  <!-- I commented the below line out because I wasn't sure what it was for, but it wouldn't let me use the href to the style.css file with it in -->
+  <!-- <base href="/"> -->
 
   <title>Artisanal</title>
 
@@ -19,16 +20,13 @@
 <body ng-app="" ng-controller="">
 <div class="container">
   
-  <!-- HEADER -->
-  <nav class="navbar navbar-inverse">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="/">Artisanal</a>
-    </div>
-    <ul class="nav navbar-nav">
-      <li><a href="/nerds">Users</a></li>
-      <li><a href="/geeks">Businesses</a></li>
-    </ul>
-  </nav>
+  <div id="user">
+  <!-- the href below for users and business will need to be changed accordingly, I just put them there as place holders for now -->
+    <a href="/api/users">USERS</a>
+  </div>
+  <div id="business">
+    <a href="/api/business">BUSINESS</a>
+  </div>
 
   <!-- ANGULAR DYNAMIC CONTENT -->
   <div ng-view></div>

@@ -1,0 +1,33 @@
+
+.container {
+  width: 100%;
+  margin: 60px, auto;
+  position: relative;
+  display: inline-block;
+}
+
+#user {
+  display: inline-block;
+ /* position: absolute;*/
+  float: left;
+  width: 50%;
+  text-align: center;
+  height: 100px;
+  line-height: 100px;
+  white-space: nowrap;
+}
+
+#business {
+  display: inline-block;
+  /*position: absolute;*/
+  float: right;
+  width: 50%;
+  text-align: center;
+  height: 100px;
+  line-height: 100px;
+  white-space: nowrap;
+}
+
+.container a {
+  text-decoration: none;
+}
