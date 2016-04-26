@@ -1,0 +1,2 @@
+//I went ahead and created the main module here in this file -- feel free to move it to another location if you guys see fit.  The reason why I put it here is simply because it was here in the skeleton app I am using as a reference.
+angular.module('artisanalApp', ['BusRegCtrl'])
