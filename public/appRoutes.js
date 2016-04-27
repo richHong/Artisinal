@@ -7,8 +7,7 @@ angular.module('appRoutes', [])
         templateUrl: 'views/viewIndex.html',
         controller: 'RegController'
       })
-      .when('/api/register', {
-
+      .when('/register', {
         templateUrl: 'views/busRegistration.html',
         controller: 'RegController'
       })
