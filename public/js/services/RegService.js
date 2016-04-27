@@ -1,5 +1,5 @@
 //question on why RegCtrl is being injected here into this module
-angular.module('RegService', ['RegCtrl'])
+angular.module('RegService', [])
 
 .factory('RegFactory', function($http) {
 
@@ -9,7 +9,7 @@ angular.module('RegService', ['RegCtrl'])
     console.log('inside the addBusiness function inside services:', busName);
     return $http({  
       method: 'POST',
-      URL: '/business',
+      url: '/api/business',
       data: { 'name': busName, 
               'address': busAddress, 
               'phoneNumber': busPhone, 
@@ -19,11 +19,39 @@ angular.module('RegService', ['RegCtrl'])
               'menu': busMenu,
               'link': busWebsiteLink
             }
-    });
-  }
+    }).then(function(res){
+      return res;
+    })
+  };
 
   return {
     addBusiness: addBusiness
   }
 
 });
+
+// var addMovie = function (film, title, type) {
+
+
+//     return $http({
+//       method: 'POST',
+//       url: "/api/movies",
+//       data: {
+//         movieTitle: title,
+//         mediaType: type,
+//         director: director,
+//         story: story,
+//         year: year,
+//         genre: genre,
+//         language: language
+//       }
+//     })
+//     .then(function (res) {
+//       return res;
+//     })
+//   };
+//   return {
+//     getMovies: getMovies, 
+//     addMovie: addMovie,
+//   };
+// })

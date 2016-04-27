@@ -1,5 +1,5 @@
 angular.module('ArtisanApp',
-  ['appRoutes','MainCtrl', 'ProfileCtrl', 'RegCtrl', 'RegService']);
+  ['MainCtrl', 'ProfileCtrl', 'RegCtrl', 'RegService']);
 
 // 'appRoutes',
 //    'RegController',
