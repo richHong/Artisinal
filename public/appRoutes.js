@@ -3,9 +3,7 @@ angular.module('appRoutes', [])
 .config(['$routeProvider',
   function($routeProvider) {
 
-    //below there was a "These" written -- I commented it out
-    // These
-
+    These
     $routeProvider
       .when('/', {
         templateUrl: 'views/viewIndex.html',
@@ -18,6 +16,5 @@ angular.module('appRoutes', [])
       .when('/profile', {
         templateUrl: 'views/'
       });
-
   }
 ]);
