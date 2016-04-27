@@ -30,28 +30,3 @@ angular.module('RegService', [])
 
 });
 
-// var addMovie = function (film, title, type) {
-
-
-//     return $http({
-//       method: 'POST',
-//       url: "/api/movies",
-//       data: {
-//         movieTitle: title,
-//         mediaType: type,
-//         director: director,
-//         story: story,
-//         year: year,
-//         genre: genre,
-//         language: language
-//       }
-//     })
-//     .then(function (res) {
-//       return res;
-//     })
-//   };
-//   return {
-//     getMovies: getMovies, 
-//     addMovie: addMovie,
-//   };
-// })

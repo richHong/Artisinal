@@ -4,15 +4,19 @@ angular.module('appRoutes', [])
   function($routeProvider) {
     $routeProvider
       .when('/', {
-        templateUrl: 'views/busRegistration.html',
+        templateUrl: 'views/viewIndex.html',
         controller: 'RegController'
       })
+
       .when('/api/registration', {
+
+      .when('/register', {
+
         templateUrl: 'views/busRegistration.html',
         controller: 'RegController'
       })
-      .when('/profile', {
-        templateUrl: 'views/'
-      });
+      // .when('/profile', {
+      //   templateUrl: 'views/'
+      // });
   }
 ]);

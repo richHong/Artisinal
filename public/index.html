@@ -11,34 +11,33 @@
   <link rel="stylesheet" href="css/style.css"> <!-- custom styles -->
 
   <!-- JS Insert links to bower components here below-->
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.js"></script>
+  <script src="libs/angular/angular.js"></script>
 
   <!-- <script src="libs/angular/angular.min.js"></script> -->
   <script src="libs/angular-route/angular-route.js"></script>
 
   <!-- ANGULAR CUSTOM insert controller and services files below-->
+  <script src="app.js"></script>
+  <script src="appRoutes.js"></script>
   <script src="js/controllers/MainCtrl.js"></script>
   <script src="js/controllers/ProfileCtrl.js"></script>
   <script src="js/controllers/RegCtrl.js"></script>
   <script src="js/services/RegService.js"></script>
-  <script src="app.js"></script>
-  <script src="appRoutes.js"></script>
- 
+
 </head>
 <body ng-app="ArtisanApp">
 <div class="container">
-  
+
   <div id="user">
 <!--    the href below for users and business will need to be changed accordingly, I just put them there as place holders for now.  Also, we can add images later in place of just the text users and business -->
-    <a href="/api/users">USERS</a>
+    <a href="#/">USERS</a>
   </div>
   <div id="business">
-    <a href="/api/registration">BUSINESS</a>
+
+    <a href="#/register">BUSINESS</a>
   </div>
 
 
-  <!-- ANGULAR DYNAMIC CONTENT -->
-  <div ng-view></div>
 
   <div class="business-registration" ng-controller="RegController">
   <form id="business-registration" ng-submit="registerBusiness(busName, busAddress, busPhone, busEmail, busWebsiteLink, busPic, busMenu, busDescription)">
@@ -72,6 +71,7 @@
   </form>
 
   </div>
+
 
 </div>
 </body>
