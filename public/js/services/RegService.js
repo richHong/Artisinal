@@ -1,5 +1,5 @@
 //question on why RegCtrl is being injected here into this module
-angular.module('RegService', [])
+angular.module('RegService', ['RegCtrl'])
 
 .factory('RegFactory', function($http) {
 
@@ -9,7 +9,7 @@ angular.module('RegService', [])
     console.log('inside the addBusiness function inside services:', busName);
     return $http({  
       method: 'POST',
-      URL: '/api/business',
+      URL: '/business',
       data: { 'name': busName, 
               'address': busAddress, 
               'phoneNumber': busPhone, 

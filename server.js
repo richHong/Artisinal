@@ -4,7 +4,7 @@ var express = require('express');
 var app = express();
 var mongoose = require('mongoose');
 var bodyParser = require('body-parser');
-
+var Business  = require('./app/models/bModel.js');
 
 mongoose.connect('mongodb://localhost/Artisanal');
 
@@ -28,7 +28,6 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 // routes ==================================================
 // require('./app/routes')(app); // configure our routes
-
 app.use(express.static(__dirname + '/public'));
 
 //========================================================= TESTING
@@ -56,7 +55,7 @@ app.post('/api/business', function(req, res){
   //    }
   // })
 
-
+  res.send('ok it was sent!!!!');
 });
 //=========================================================
 
