@@ -13,7 +13,7 @@ mongoose.connect('mongodb://localhost/Artisanal');
 var db = require('./config/db');
 
 // PORT------------------------------------------
-var port = process.env.PORT || 8080;
+var port = process.env.PORT || 3030;
 
 // connect to our mongoDB database
 // mongoose.connect(db.url);
@@ -25,7 +25,7 @@ app.use(bodyParser.json({ type: 'application/vnd.api+json' }));
 
 // parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: true }));
-
+app.use(express.static(__dirname + '/public'));
 // routes ==================================================
 require('./app/routes')(app); // configure our routes
 
