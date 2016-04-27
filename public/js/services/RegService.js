@@ -2,7 +2,7 @@
 angular.module('RegService', [])
 
 .factory('RegFactory', function($http) {
-
+  console.log('inside factory!!!!')
   var addBusiness = function(busName, busAddress, busPhone, busEmail, busWebsiteLink, busPic, busMenu, busDescription) {
     return $http({  
       method: 'POST',

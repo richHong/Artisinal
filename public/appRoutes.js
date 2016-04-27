@@ -3,7 +3,7 @@ angular.module('appRoutes', [])
 .config(['$routeProvider',
   function($routeProvider) {
 
-    These
+    // These
     $routeProvider
       .when('/', {
         templateUrl: 'views/viewIndex.html',
