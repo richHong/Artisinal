@@ -2,8 +2,11 @@
 angular.module('RegService', [])
 
 .factory('RegFactory', function($http) {
-  console.log('inside factory!!!!')
+
+  console.log('inside factory!!!!');
+
   var addBusiness = function(busName, busAddress, busPhone, busEmail, busWebsiteLink, busPic, busMenu, busDescription) {
+    console.log('inside the addBusiness function inside services:', busName);
     return $http({  
       method: 'POST',
       URL: '/api/business',
