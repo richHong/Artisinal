@@ -6,11 +6,11 @@ module.exports = function(app){
 //get for business model  to retrieve information within Business database
 app.get('/api/business', function(req, res){
   Business.find({}, function(err, business){
-  if(err){ 
+  if(err){
     res.send(err);
   };
   res.json(business);
-    
+
   });
 });
 
@@ -30,7 +30,7 @@ app.post('/api/business', function(req, res){
   //save the newly created model into the database
   newBusiness.save(function(err, newBusiness){
     if (err) {
-      //log error if one exists 
+      //log error if one exists
       console.log(err)
       res.send({errorMessage: err});
      }else{
@@ -42,4 +42,3 @@ app.post('/api/business', function(req, res){
 });
 
 }
-
