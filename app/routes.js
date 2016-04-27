@@ -14,32 +14,32 @@ app.get('/api/business', function(req, res){
   });
 });
 
-// app.post('/api/business', function(req, res){
-//   //create new instance of the business model and add properties to new instance
-//   console.log('*********************** post being called in routs.js file -- SERVER SIDE POWER!!!!')
-//   var newBusiness = new Business();
-//   newBusiness.name = req.body.name,
-//   newBusiness.address = req.body.address,
-//   newBusiness.phoneNumber = req.body.phoneNumber,
-//   newBusiness.email = req.body.email,
-//   newBusiness.description =  req.body.description,
-//   newBusiness.picture = req.body.picture,
-//   newBusiness.menu =  req.body.menu,
-//   newBusiness.link = req.body.link
+app.post('/api/business', function(req, res){
+  //create new instance of the business model and add properties to new instance
+  console.log('*********************** post being called in routs.js file -- SERVER SIDE POWER!!!!')
+  var newBusiness = new Business();
+  newBusiness.name = req.body.name,
+  newBusiness.address = req.body.address,
+  newBusiness.phoneNumber = req.body.phoneNumber,
+  newBusiness.email = req.body.email,
+  newBusiness.description =  req.body.description,
+  newBusiness.picture = req.body.picture,
+  newBusiness.menu =  req.body.menu,
+  newBusiness.link = req.body.link
 
-//   //save the newly created model into the database
-//   newBusiness.save(function(err, newBusiness){
-//     if (err) {
-//       //log error if one exists 
-//       console.log(err)
-//       res.send({errorMessage: err});
-//      }else{
-//       res.json(req.body);
-//      }
-//   })
+  //save the newly created model into the database
+  newBusiness.save(function(err, newBusiness){
+    if (err) {
+      //log error if one exists 
+      console.log(err)
+      res.send({errorMessage: err});
+     }else{
+      res.json(req.body);
+     }
+  })
 
 
-// });
+});
 
 }
 
