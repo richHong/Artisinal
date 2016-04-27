@@ -27,3 +27,6 @@ angular.module('RegService', ['RegCtrl'])
   }
 
 });
+
+
+//create the function to send post request to server to add new business to database
