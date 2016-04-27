@@ -4,8 +4,8 @@ angular.module('appRoutes', [])
   function($routeProvider) {
     $routeProvider
       .when('/', {
-        templateUrl: 'views/viewIndex.html',
-        controller: 'MainController'
+        templateUrl: 'views/busRegistration.html',
+        controller: 'RegController'
       })
       .when('/api/registration', {
         templateUrl: 'views/busRegistration.html',
