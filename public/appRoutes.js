@@ -4,8 +4,7 @@ angular.module('appRoutes', [])
   function($routeProvider) {
     $routeProvider
       .when('/', {
-        templateUrl: 'views/viewIndex.html',
-        controller: 'RegController'
+        templateUrl: 'views/frontPage.html'
       })
       .when('/register', {
         templateUrl: 'views/busRegistration.html',
