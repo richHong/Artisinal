@@ -7,15 +7,16 @@ angular.module('RegService', [])
 
   var addBusiness = function(busName, busAddress, busPhone, busEmail, busWebsiteLink, busPic, busMenu, busDescription) {
     console.log('inside the addBusiness function inside services:', busName);
-    return $http({  
+    return $http({
       method: 'POST',
       url: '/api/business',
-      data: { 'name': busName, 
-              'address': busAddress, 
-              'phoneNumber': busPhone, 
+      data: { 'name': busName,
+              'address': busAddress,
+              'specialty': busSpecialty,
+              'phoneNumber': busPhone,
               'email': busEmail,
               'description': busDescription,
-              'picture': busPic,  
+              'picture': busPic,
               'menu': busMenu,
               'link': busWebsiteLink
             }
@@ -29,4 +30,3 @@ angular.module('RegService', [])
   }
 
 });
-
