@@ -22,10 +22,18 @@ angular.module('RegService', [])
             }
     }).then(function(res){
       return res;
-    })
+    });
+  };
+
+  var getBusinesses = function() {
+    return $http({
+      method: 'GET',
+      url: '/api/business'
+    });
   };
 
   return {
+    getBusinesses: getBusinesses,
     addBusiness: addBusiness
   }
 
