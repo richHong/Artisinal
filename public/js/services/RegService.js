@@ -26,6 +26,7 @@ angular.module('RegService', [])
   };
 
   var getBusinesses = function() {
+    console.log('Businesses grabbed');
     return $http({
       method: 'GET',
       url: '/api/business'
