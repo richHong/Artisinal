@@ -25,6 +25,22 @@ angular.module('RegService', [])
     });
   };
 
+  var addUser = function(fullName, userAddress, userPhone, userEmail, userPic) {
+    console.log('inside the addUser function inside services:', fullName);
+    return $http({
+      method: 'POST',
+      url: '/api/users',
+      data: { 'name': fullName,
+              'address': userAddress,
+              'phoneNumber': userPhone,
+              'email': userEmail,
+              'picture': userPic
+            }
+    }).then(function(res){
+      return res;
+    });
+  };
+
   var getBusinesses = function() {
     console.log('Businesses grabbed');
     return $http({
@@ -33,9 +49,11 @@ angular.module('RegService', [])
     });
   };
 
+
   return {
     getBusinesses: getBusinesses,
-    addBusiness: addBusiness
+    addBusiness: addBusiness,
+    addUser: addUser
   }
 
 });
