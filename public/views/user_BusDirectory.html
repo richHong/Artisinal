@@ -2,17 +2,13 @@
 
 <form name="userDirectoryForm">
   <label for="singleSelect">Please choose from the following specialty types: </label>
-  <select name="singleSelect" id="singleSelect" ng-model="data.singleSelect">
+  <!--option types for the below selection can be found in controller file named UserCtrl.js -->
+  <select ng-options="option for option in listOfTypes"
+          ng-model="selectedType"
+          ng-change="getBusiness()">
+  <!-- code in line 10 is not needed, it is just there so when page loads, it defaults to that selection -->
   <option value="">---Please Select---</option>
-  <!--The below value types will be replaced with whatever specialty types we want to have -->
-  <option value="type1">Type 1</option>
-  <option value="type2">Type 2</option>
-  <option value="type3">Type 3</option>
-  <option value="type4">Type 4</option>
-  <option value="type5">Type 5</option>
-  <option value="type6">Type 6</option>
-  <option value="type7">Type 7</option>
-  <option value="type8">Type 8</option>
-
-  <tt>Item selected: {{data.singleSelect}}</tt>
+  </select><br>
+  <!-- code in line 13 also is not needed for final product, it is just there to show value of selection -->
+  <tt>Item selected: {{selectedType}}</tt>
 </form>
