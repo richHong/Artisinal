@@ -6,12 +6,15 @@ var Schema  = mongoose.Schema;
 
 //basic schema for Businesses entering information from from
 var Users = new Schema({
-    name: String,
     username: String,
     password: String,
+    name: String,
     address: String,
     phoneNumber: Number,
-    email: String,
+    email: {
+      type:String,
+      unique: true
+    },
     //picture will be uploaded to s3 (aws) and returned as link to be stored in db
     picture: String,
 })
