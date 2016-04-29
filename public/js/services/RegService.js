@@ -5,28 +5,37 @@ angular.module('RegService', [])
 
   console.log('inside factory!!!!');
 
-  var addBusiness = function(busName, busAddress, busPhone, busEmail, busWebsiteLink, busPic, busMenu, busDescription) {
+  var addBusiness = function(busName, busSpecialty, busAddress, busPhone, busEmail, busWebsiteLink, busPic, busMenu, busDescription) {
     console.log('inside the addBusiness function inside services:', busName);
-    return $http({  
+    return $http({
       method: 'POST',
       url: '/api/business',
-      data: { 'name': busName, 
-              'address': busAddress, 
-              'phoneNumber': busPhone, 
+      data: { 'name': busName,
+              'address': busAddress,
+              'specialty': busSpecialty,
+              'phoneNumber': busPhone,
               'email': busEmail,
               'description': busDescription,
-              'picture': busPic,  
+              'picture': busPic,
               'menu': busMenu,
               'link': busWebsiteLink
             }
     }).then(function(res){
       return res;
-    })
+    });
+  };
+
+  var getBusinesses = function() {
+    console.log('Businesses grabbed');
+    return $http({
+      method: 'GET',
+      url: '/api/business'
+    });
   };
 
   return {
+    getBusinesses: getBusinesses,
     addBusiness: addBusiness
   }
 
 });
-

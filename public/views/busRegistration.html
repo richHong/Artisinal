@@ -1,31 +1,42 @@
+<h1>Artisanal</h1>
+
+<h3>Welcome to the Community! <i><u>Register your Business here:</u></i></h3>
 <div class="business-registration" >
-  <form id="business-registration" ng-submit="registerBusiness(busName, busAddress, busPhone, busEmail, busWebsiteLink, busPic, busMenu, busDescription)">
-    <label>Business Name:</label><input type="text" ng-model="busName" />
-    <div>
-      <label>Business Address:</label><input type="text" ng-model="busAddress" />
+  <form name="registrationForm" id="business-registration" ng-submit="registerBusiness(busName, busSpecialty, busAddress, busPhone, busEmail, busWebsiteLink, busPic, busMenu, busDescription)">
+    <div class="form-group">
+      <label>Business Name:</label><input type="text" ng-model="busName" ng-required='true' class="form-control" placeholder="Your Business" />
     </div>
-    <div>
-      <label>Business Number:</label><input type="text" ng-model="busPhone" />
+    <div class="form-group">
+      <label>Business Address:</label><input type="text" ng-model="busAddress" ng-required='true' class="form-control" placeholder="Your Business' Physical Address"/>
     </div>
-    <div>
-      <label>Business Email:</label><input type="text" ng-model="busEmail" />
+    <div class="form-group">
+      <label>Food Specialty:</label><input type="text" ng-model="busSpecialty" ng-required='true' class="form-control" placeholder="What is your artisanal specialty?"/>
     </div>
-    <div>
-      <label>Web Address:</label><input type="text" ng-model="busWebsiteLink" />
+    <div class="form-group">
+      <label>Business Number:</label><input type="number" ng-model="busPhone" ng-required='true' class="form-control" placeholder="Your Phone Number"/>
     </div>
-    <div>
-      <label>Upload Pic:</label><input type="file" name="pic" accept="image/*" ng-model="busPic">
+    <div class="form-group">
+      <label>Business Email:</label><input type="email" ng-model="busEmail" ng-required='true' class="form-control" placeholder="Contact E-mail"/>
     </div>
-    <div>
-      <label>Upload Menu:</label><input type="file" name="menu" accept="image/*" ng-model="busMenu">
+    <div class="form-group">
+      <label>Web Address:</label><input type="url" ng-model="busWebsiteLink" ng-required='true' class="form-control" placeholder="http://www.example.com"/>
     </div>
-    <div>
+    <div class="form-group">
+      <label>Upload Pic:</label><input type="file" class="form-control" name="pic" accept="image/*" ng-model="busPic" />
+      <small class="text-muted">'.jpg' or '.png' Files</small>
+    </div><br>
+    <div class="form-group">
+      <label>Upload Menu:</label><input type="file" class="form-control" name="menu" accept="image/*" ng-model="busMenu" />
+      <small class="text-muted">In PDF Format</small>
+    </div>
+    <div class="form-group"><br>
       <label>Business Description:</label>
         <div id="business-description">
-          <textarea form="business-registration" rows="3" cols="100" ng-model="busDescription"></textarea>
+          <textarea form="business-registration" ng-required='true' class="form-control" rows="3" cols="100" ng-model="busDescription"></textarea>
         </div>
     </div>
     <p></p>
-    <input type="submit" id="submit" value="submit" />
+    <input type="submit" value="submit" ng-disabled="registrationForm.url.$invalid" ng-click="go('/profile')"/>
+    <button><a href="#/profile">To Profile</a></button>
   </form>
 </div>
