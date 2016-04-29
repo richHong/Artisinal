@@ -18,7 +18,7 @@ app.post('/api/business', function(req, res){
   //create new instance of the business model and add properties to new instance
   console.log('*********************** post being called in routs.js file -- SERVER SIDE POWER!!!!')
   var newBusiness = new Business();
-  newBusiness.name = req.body.name,
+  newBusiness.company = req.body.name,
   newBusiness.address = req.body.address,
   newBusiness.phoneNumber = req.body.phoneNumber,
   newBusiness.email = req.body.email,

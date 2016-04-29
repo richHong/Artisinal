@@ -7,6 +7,8 @@ var Schema  = mongoose.Schema;
 //basic schema for Businesses entering information from from
 var Users = new Schema({
     name: String,
+    username: String,
+    password: String,
     address: String,
     phoneNumber: Number,
     email: String,
