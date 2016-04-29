@@ -10,7 +10,7 @@ angular.module('RegService', [])
     return $http({
       method: 'POST',
       url: '/api/business',
-      data: { 'name': busName,
+      data: { 'company': busName,
               'address': busAddress,
               'specialty': busSpecialty,
               'phoneNumber': busPhone,
