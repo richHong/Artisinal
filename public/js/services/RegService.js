@@ -25,12 +25,14 @@ angular.module('RegService', [])
     });
   };
 
-  var addUser = function(fullName, userAddress, userPhone, userEmail, userPic) {
+  var addUser = function(userName, userPassword,fullName, userAddress, userPhone, userEmail, userPic) {
     console.log('inside the addUser function inside services:', fullName);
     return $http({
       method: 'POST',
       url: '/api/users',
       data: { 'name': fullName,
+              'username': userName,
+              'password': userPassword,
               'address': userAddress,
               'phoneNumber': userPhone,
               'email': userEmail,

@@ -1,8 +1,14 @@
-<h1>Artisanal</h1>
+<h1><a href="#/">Artisanal</a></h1>
 
-<h3>Welcome to the Community! <i><u>Please enter registration information below:</u></i></h3>
+<h4>Welcome to the Community! <i><u>Please enter registration information below:</u></i></h4>
 <div class="user-registration" >
-  <form name="registrationForm" id="user-registration" ng-submit="registerUser(fullName, userAddress, userPhone, userEmail, userPic)">
+  <form name="registrationForm" id="user-registration" ng-submit="registerUser(userName, userPassword,fullName, userAddress, userPhone, userEmail, userPic)">
+    <div class="form-group">
+      <label>User Login Name:</label><input type="text" ng-model="userName" ng-required='true' class="form-control" placeholder="User Login Name" />
+    </div>
+    <div class="form-group">
+      <label>Password:</label><input type="text" ng-model="userPassword" ng-required='true' class="form-control" placeholder="Password" />
+    </div>
     <div class="form-group">
       <label>First and last name:</label><input type="text" ng-model="fullName" ng-required='true' class="form-control" placeholder="Your Name" />
     </div>

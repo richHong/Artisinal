@@ -4,4 +4,5 @@ angular.module('ArtisanApp',
  'MainCtrl',
  'ProfileCtrl',
  'RegCtrl',
- 'RegService']);
+ 'RegService',
+ 'UserCtrl']);

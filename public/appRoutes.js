@@ -15,7 +15,7 @@ angular.module('appRoutes', [])
         controller: 'UserSelectController'
       })
       .when('/registerUser', {
-        templateUrl: 'userRegistration.html',
+        templateUrl: 'views/userRegistration.html',
         controller: 'RegController'
       })
       .when('/register', {

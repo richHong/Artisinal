@@ -17,9 +17,9 @@ angular.module('RegCtrl', [])
     RegFactory.addBusiness(busName, busSpecialty, busAddress, busPhone, busEmail, busWebsiteLink, busPic, busMenu, busDescription);
   }
 
-  $scope.registerUser = function(fullName, userAddress, userPhone, userEmail, userPic) {
-    console.log('inside userCtrl:', fullName, userAddress, userPhone, userEmail, userPic);
-    RegFactory.addUser(fullName, userAddress, userPhone, userEmail, userPic);
+  $scope.registerUser = function(userName, userPassword,fullName, userAddress, userPhone, userEmail, userPic) {
+    console.log('inside userCtrl:', userName, userPassword,fullName, userAddress, userPhone, userEmail, userPic);
+    RegFactory.addUser(userName, userPassword,fullName, userAddress, userPhone, userEmail, userPic);
   }
 
 });
