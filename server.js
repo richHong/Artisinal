@@ -30,7 +30,6 @@ app.use(express.static(__dirname + '/public'));
 require('./app/routes')(app); // configure our routes
 app.use(express.static(__dirname + '/public'));
 
-
 // start app ===============================================
 // startup our app at http://localhost:8080
 app.listen(port);

@@ -6,6 +6,10 @@
   display: inline-block;
 }
 
+h1 {
+  text-align: center;
+}
+
 #user {
   display: inline-block;
  /* position: absolute;*/
@@ -26,6 +30,10 @@
   height: 100px;
   line-height: 100px;
   white-space: nowrap;
+}
+
+#SpecialtySelectionType {
+  text-align: center;
 }
 
 .container a {

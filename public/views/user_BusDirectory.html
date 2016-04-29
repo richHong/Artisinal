@@ -1,0 +1,16 @@
+<h1><a href="#/">Artisanal</a></h1>
+
+<div id="SpecialtySelectionType">
+  <form name="userDirectoryForm">
+    <label for="singleSelect">Please choose from the following specialty types: </label>
+    <!--option types for the below selection can be found in controller file named UserCtrl.js -->
+    <select ng-options="option for option in listOfTypes"
+            ng-model="selectedType"
+            ng-change="getBusiness()">
+    <!-- code in line 10 is not needed, it is just there so when page loads, it defaults to that selection -->
+    <option value="">---Please Select---</option>
+    </select><br>
+    <!-- code in line 13 also is not needed for final product, it is just there to show value of selection -->
+    <tt>Item selected: {{selectedType}}</tt>
+  </form>
+</div>
