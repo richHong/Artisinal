@@ -32,6 +32,10 @@ h1 {
   white-space: nowrap;
 }
 
+#SpecialtySelectionType {
+  text-align: center;
+}
+
 .container a {
   text-decoration: none;
 }
