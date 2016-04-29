@@ -30,10 +30,11 @@
 
 .container a {
   text-decoration: none;
+  width: 960px;
 }
 
 .business-registration label {
   display: block;
   float: left;
-  width : 150px;    
+  width : 150px;
 }
