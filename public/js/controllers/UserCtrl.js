@@ -9,5 +9,8 @@ angular.module('UserCtrl', [])
     console.log('You selected: ', $scope.selectedType);
   };
 
+  $scope.loginUser = function() {
+    alert('login function called!');
+  };
 
 })
