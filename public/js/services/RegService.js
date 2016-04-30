@@ -7,6 +7,7 @@ angular.module('RegService', [])
 
   var addBusiness = function(busName, busSpecialty, busAddress, busPhone, busEmail, busWebsiteLink, busPic, busMenu, busDescription) {
     console.log('inside the addBusiness function inside services:', busSpecialty);
+    console.log('This is typeOf', typeof busSpecialty);
     return $http({
       method: 'POST',
       url: '/api/business',
@@ -30,9 +31,9 @@ angular.module('RegService', [])
     return $http({
       method: 'POST',
       url: '/api/users',
-      data: { 'name': fullName,
-              'username': userName,
+      data: { 'username': userName,
               'password': userPassword,
+              'name': fullName,
               'address': userAddress,
               'phoneNumber': userPhone,
               'email': userEmail,

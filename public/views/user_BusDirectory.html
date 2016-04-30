@@ -13,4 +13,10 @@
     <!-- code in line 13 also is not needed for final product, it is just there to show value of selection -->
     <tt>Item selected: {{selectedType}}</tt>
   </form>
+  <div class="business-list" >
+    <ul>
+        <li ng-repeat="bussinesses in queryResult">{{$scope.queryResult.specialty}}</li>
+    </ul>
+      
+  </div>
 </div>

@@ -15,12 +15,15 @@ app.get('/api/business', function(req, res){
   });
 });
 
+
+
 app.post('/api/business', function(req, res){
   //create new instance of the business model and add properties to new instance
   console.log('*********************** post being called in routs.js file -- SERVER SIDE POWER!!!!')
   var newBusiness = new Business();
   newBusiness.company = req.body.company,
   newBusiness.address = req.body.address,
+  newBusiness.specialty = req.body.specialty,
   newBusiness.phoneNumber = req.body.phoneNumber,
   newBusiness.email = req.body.email,
   newBusiness.description =  req.body.description,
@@ -38,6 +41,8 @@ app.post('/api/business', function(req, res){
       res.json(req.body);
      }
   })
+});
+
 
   app.get('/api/users', function(req, res){
   User.find({}, function(err, users){
@@ -49,12 +54,8 @@ app.post('/api/business', function(req, res){
   });
 });
 
-
-
-});
-
   app.post('/api/users', function(req, res){
-  //create new instance of the business model and add properties to new instance
+  //create new instance of the User model and add properties to new instance
   console.log('*********************** post being called in routs.js file -- SERVER SIDE POWER!!!!')
   var newUser = new User();
   newUser.name = req.body.name,
@@ -75,6 +76,5 @@ app.post('/api/business', function(req, res){
       res.json(req.body);
      }
   })
-
 });
 }
