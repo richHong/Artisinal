@@ -1,5 +1,6 @@
 // var mongoose = require('mongoose');
 var Business  = require('./models/bModel.js');
+
 var User  = require('./models/uModel.js');
 
 module.exports = function(app){
@@ -27,7 +28,8 @@ app.post('/api/business', function(req, res){
   newBusiness.phoneNumber = req.body.phoneNumber,
   newBusiness.email = req.body.email,
   newBusiness.description =  req.body.description,
-  newBusiness.picture = req.body.picture,
+  newBusiness.picture.data = fs.readFileSync(req.body.picture),
+  newBusiness.picture.contentType = 'image/jpg',
   newBusiness.menu =  req.body.menu,
   newBusiness.link = req.body.link
 

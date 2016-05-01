@@ -12,9 +12,10 @@ angular.module('RegCtrl', [])
     url: ''
   };
 
-  $scope.registerBusiness = function(busName, busSpecialty, busAddress, busPhone, busEmail, busWebsiteLink, busPic, busMenu, busDescription) {
-    console.log('inside RegCtrl:', busName, busSpecialty, busAddress, busPhone, busEmail, busWebsiteLink, busPic, busMenu, busDescription);
-    RegFactory.addBusiness(busName, busSpecialty, busAddress, busPhone, busEmail, busWebsiteLink, busPic, busMenu, busDescription);
+  $scope.registerBusiness = function(busName, busAddress, busSpecialty, busPhone, busEmail, busWebsiteLink, busPic, busMenu, busDescription) {
+    console.log('inside RegCtrl:', busName, busPic);
+    console.log('here is typeof:', typeof busPic);
+    RegFactory.addBusiness(busName, busAddress, busSpecialty, busPhone, busEmail, busWebsiteLink, busPic, busMenu, busDescription);
   }
 
   $scope.registerUser = function(userName, userPassword,fullName, userAddress, userPhone, userEmail, userPic) {
