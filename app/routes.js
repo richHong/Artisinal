@@ -1,6 +1,5 @@
 // var mongoose = require('mongoose');
 var Business  = require('./models/bModel.js');
-var fs = require('fs');
 var User  = require('./models/uModel.js');
 
 module.exports = function(app) {
@@ -24,8 +23,8 @@ module.exports = function(app) {
     newBusiness.phoneNumber = req.body.phoneNumber,
     newBusiness.email = req.body.email,
     newBusiness.description = req.body.description,
-    newBusiness.picture.data = fs.readFileSync(req.body.picture),
-    newBusiness.picture.contentType = 'image/jpg',
+    newBusiness.picture.data = req.body.picture,
+    // newBusiness.picture.contentType = 'image/jpg',
     newBusiness.menu = req.body.menu,
     newBusiness.link = req.body.link
 
