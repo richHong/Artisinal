@@ -28,8 +28,7 @@ app.post('/api/business', function(req, res){
   newBusiness.phoneNumber = req.body.phoneNumber,
   newBusiness.email = req.body.email,
   newBusiness.description =  req.body.description,
-  newBusiness.picture.data = fs.readFileSync(req.body.picture),
-  newBusiness.picture.contentType = 'image/jpg',
+  newBusiness.picture = req.body.picture,
   newBusiness.menu =  req.body.menu,
   newBusiness.link = req.body.link
 
