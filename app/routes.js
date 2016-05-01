@@ -1,5 +1,6 @@
 // var mongoose = require('mongoose');
 var Business  = require('./models/bModel.js');
+var fs = require('fs');
 
 module.exports = function(app){
 
@@ -20,10 +21,12 @@ app.post('/api/business', function(req, res){
   var newBusiness = new Business();
   newBusiness.company = req.body.company,
   newBusiness.address = req.body.address,
+  newBusiness.specialty = req.body.specialty,
   newBusiness.phoneNumber = req.body.phoneNumber,
   newBusiness.email = req.body.email,
   newBusiness.description =  req.body.description,
-  newBusiness.picture = req.body.picture,
+  newBusiness.picture.data = fs.readFileSync(req.body.picture),
+  newBusiness.picture.contentType = 'image/jpg',
   newBusiness.menu =  req.body.menu,
   newBusiness.link = req.body.link
 

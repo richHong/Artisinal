@@ -15,6 +15,7 @@ var Businesses = new Schema({
         type:String,
         required: true
     },
+    specialty: String,
     phoneNumber: {
         type:String,
         required: true
@@ -24,10 +25,9 @@ var Businesses = new Schema({
         required: true,
         unique: true
     },
-    specialty: String,
     description: String,
     //picture will be uploaded to s3 (aws) and returned as link to be stored in db
-    picture: String,
+    picture: { data: Buffer, contentType: String},
     //menu will be uploaded to s3 (aws) and returned as link to be stored in db
     menu: String,
     link: String
@@ -37,3 +37,4 @@ var Businesses = new Schema({
  var Business =  mongoose.model('Business', Businesses);
 
  module.exports = Business;
+
