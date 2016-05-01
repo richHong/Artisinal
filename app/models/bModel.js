@@ -27,7 +27,7 @@ var Businesses = new Schema({
     },
     description: String,
     //picture will be uploaded to s3 (aws) and returned as link to be stored in db
-    picture: { data: Buffer, contentType: String},
+    picture: String,
     //menu will be uploaded to s3 (aws) and returned as link to be stored in db
     menu: String,
     link: String
