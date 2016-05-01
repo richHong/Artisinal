@@ -5,6 +5,7 @@ var app = express();
 var mongoose = require('mongoose');
 var bodyParser = require('body-parser');
 var Business  = require('./app/models/bModel.js');
+var User  = require('./app/models/uModel.js');
 
 mongoose.connect('mongodb://localhost/Artisanal');
 
