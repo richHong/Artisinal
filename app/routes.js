@@ -1,6 +1,7 @@
 // var mongoose = require('mongoose');
 var Business  = require('./models/bModel.js');
-var fs = require('fs');
+
+var User  = require('./models/uModel.js');
 
 module.exports = function(app){
 
@@ -14,6 +15,8 @@ app.get('/api/business', function(req, res){
 
   });
 });
+
+
 
 app.post('/api/business', function(req, res){
   //create new instance of the business model and add properties to new instance
@@ -40,8 +43,40 @@ app.post('/api/business', function(req, res){
       res.json(req.body);
      }
   })
-
-
 });
 
+
+  app.get('/api/users', function(req, res){
+  User.find({}, function(err, users){
+  if(err){
+    res.send(err);
+  };
+  res.json(users);
+
+  });
+});
+
+  app.post('/api/users', function(req, res){
+  //create new instance of the User model and add properties to new instance
+  console.log('*********************** post being called in routs.js file -- SERVER SIDE POWER!!!!')
+  var newUser = new User();
+  newUser.name = req.body.name,
+  newUser.username = req.body.username,
+  newUser.password = req.body.password,
+  newUser.address = req.body.address,
+  newUser.phoneNumber =  req.body.phoneNumber,
+  newUser.email = req.body.email,
+  newUser.picture =  req.body.picture,
+ 
+  //save the newly created model into the database
+  newUser.save(function(err, newUser){
+    if (err) {
+      //log error if one exists
+      console.log(err)
+      res.send({errorMessage: err});
+     }else{
+      res.json(req.body);
+     }
+  })
+});
 }
