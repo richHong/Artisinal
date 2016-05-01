@@ -4,7 +4,6 @@ var fs = require('fs');
 var User  = require('./models/uModel.js');
 
 module.exports = function(app) {
-
   //get for business model  to retrieve information within Business database
   app.get('/api/business', function(req, res) {
     Business.find({}, function(err, business) {
@@ -24,10 +23,10 @@ module.exports = function(app) {
     newBusiness.specialty = req.body.specialty,
     newBusiness.phoneNumber = req.body.phoneNumber,
     newBusiness.email = req.body.email,
-    newBusiness.description =  req.body.description,
+    newBusiness.description = req.body.description,
     newBusiness.picture.data = fs.readFileSync(req.body.picture),
     newBusiness.picture.contentType = 'image/jpg',
-    newBusiness.menu =  req.body.menu,
+    newBusiness.menu = req.body.menu,
     newBusiness.link = req.body.link
 
     //save the newly created model into the database
