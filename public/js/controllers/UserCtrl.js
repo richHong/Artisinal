@@ -9,8 +9,12 @@ angular.module('UserCtrl', [])
   $scope.getBusiness = function(){
     
   console.log('You selected: ', $scope.selectedType);
-  $scope.data.list = queryFactory.queryType($scope.selectedType);
-  console.log("What is $scope.data.list", $scope.data.list);
+  queryFactory.queryType($scope.selectedType)
+  .then(function(res) {
+    console.log('this is res:', res);
+    $scope.data.list = res
+  });
+  // console.log("What is $scope.data.list", $scope.data.list);
 
   }
 
