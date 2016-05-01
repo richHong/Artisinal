@@ -16,7 +16,11 @@ mongoose.connect('mongodb://localhost/Artisanal');
 // PORT------------------------------------------
 var port = process.env.PORT || 3030;
 
+// connect to our mongoDB database		
+// mongoose.connect(db.url);
+
 // parse application/vnd.api+json as json
+app.use(bodyParser.json());
 app.use(bodyParser.json({ type: 'application/vnd.api+json' }));
 
 // parse application/x-www-form-urlencoded

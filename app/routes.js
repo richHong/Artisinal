@@ -23,7 +23,8 @@ module.exports = function(app) {
     newBusiness.phoneNumber = req.body.phoneNumber,
     newBusiness.email = req.body.email,
     newBusiness.description = req.body.description,
-    newBusiness.picture = req.body.picture,
+    newBusiness.picture.data = req.body.picture,
+    // newBusiness.picture.contentType = 'image/jpg',
     newBusiness.menu = req.body.menu,
     newBusiness.link = req.body.link
 

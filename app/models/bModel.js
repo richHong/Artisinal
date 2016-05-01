@@ -37,4 +37,3 @@ var Businesses = new Schema({
  var Business =  mongoose.model('Business', Businesses);
 
  module.exports = Business;
-
