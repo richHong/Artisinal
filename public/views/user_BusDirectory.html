@@ -10,12 +10,14 @@
             ng-change="getBusiness()">
     <!-- code in line 10 is not needed, it is just there so when page loads, it defaults to that selection -->
     <option value="">---Please Select---</option>
-    </select><br>
+    </select><br><br>
     <!-- code in line 13 also is not needed for final product, it is just there to show value of selection -->
-    <tt>Item selected: {{selectedType}}</tt>
+    <!-- <tt>Item selected: {{selectedType}}</tt> -->
+    <br>
   </form>
   <div class="business-list" >
     <ul ng-repeat="item in data.list">
+
         <li><img class="images" ng-src="{{item.picture}}"/></li>
         <li>{{item.company}}</li>
         <li>{{item.phoneNumber}}</li>
@@ -23,6 +25,5 @@
         <li>{{item.description}}</li>
         <li><a href="{{item.link}}">{{item.link}}</a></li>
     </ul>
-      
   </div>
 </div>
