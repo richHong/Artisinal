@@ -173,3 +173,13 @@ div.business-registration{
   margin: 10px auto;
   width : 400px;    
 }
+div.business-profile{
+  display: block;
+  text-align: center;
+}
+#profile-link{
+  position: absolute;
+  bottom: 25px;
+  font-size: 18px;
+  text-decoration: none;
+}
