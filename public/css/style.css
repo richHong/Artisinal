@@ -178,10 +178,22 @@ div.business-registration{
 div.business-profile{
   display: block;
   text-align: center;
+  overflow: auto;
 }
 #profile-link{
   position: absolute;
   bottom: 25px;
   font-size: 18px;
   text-decoration: none;
+}
+div.business-list ul{
+  display: inline;
+}
+div.business-list li{
+  display: inline;
+}
+
+.images{
+  height: 50px;
+  width: 50px;
 }

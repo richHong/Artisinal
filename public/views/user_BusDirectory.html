@@ -16,10 +16,12 @@
   </form>
   <div class="business-list" >
     <ul ng-repeat="item in data.list">
+        <li><img class="images" ng-src="{{item.picture}}"/></li>
         <li>{{item.company}}</li>
+        <li>{{item.phoneNumber}}</li>
         <li>{{item.address}}</li>
         <li>{{item.description}}</li>
-        <li>{{item.link}}</li>
+        <li><a href="{{item.link}}">{{item.link}}</a></li>
     </ul>
       
   </div>
