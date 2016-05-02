@@ -9,7 +9,7 @@ angular.module('RegCtrl', ['ngFileUpload'])
 //         var reader = new FileReader();
 //         reader.onload = function (loadEvent) {
 //           var fileread = loadEvent.target.result;
-//           console.log(fileread);
+
 //         }
         
 //         reader.readAsDataURL(changeEvent.target.files[0]);
@@ -45,8 +45,9 @@ $scope.uploadFile = function($file){
 };
 
 
+
   $scope.registerBusiness = function(busName, busSpecialty, busAddress, busPhone, busEmail, busWebsiteLink, busPic, busMenu, busDescription) {
-    $scope.upload();
+    // $scope.upload();
     RegFactory.addBusiness(busName, busSpecialty, busAddress, busPhone, busEmail, busWebsiteLink, busPic, busMenu, busDescription)
     .then(function() {
       $location.path('/profile');
