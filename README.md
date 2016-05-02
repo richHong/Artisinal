@@ -1,6 +1,6 @@
 # Artisanal
 
-> A hub for both food enthusiasts and new local artisanal businesses.  Food enthusiasts will have access to a directory of the newest food companies in their area.  New artisanal food businesses can register their business in the directory to market themselves to both food enthusiasts and other businesses.  An easy and quick way for both food enthusiasts to find new artisanal businesses and for new artisanal businesses to market themselves.
+> A hub for both food enthusiasts and new local artisanal businesses. New food businesses and startups dont have the easiest way of connecting directly with consumers and other companies. Food enthusiasts will have access to a directory of the newest food companies in their area. New artisanal food businesses can register their business in the directory to market themselves to both food enthusiasts and other businesses.  An quick and easy way for both food enthusiasts to find new artisanal businesses and for new artisanal businesses to market themselves.
 
 ## Team
 

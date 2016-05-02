@@ -11,7 +11,7 @@ angular.module('UserCtrl', [])
     QueryFactory.queryType($scope.selectedType)
       .then(function(res) {
         console.log('this is res:', res);
-        $scope.data.list = res
+        $scope.data.list = res;
       });
     // console.log("What is $scope.data.list", $scope.data.list);
   };
