@@ -1,22 +1,128 @@
+ http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
 
-.container {
-  width: 100%;
-  margin: 60px, auto;
-  position: relative;
-  display: inline-block;
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+
+
+
+
+
+
+
+/*===========================================================================================================================
+
+MAIN STYLING
+
+===========================================================================================================================*/
+body{
+  overflow: hidden;
+}
+div.main-back{
+  position: relative;
+  background-image: url("images/rustic-barn-wood-background-design-decor-3 (1).jpg");
+  background-repeat: no-repeat;
+  height: 900px;
+  width: 100%;
+  font-family: 'Old Standard TT', serif;
+}
+
+
+div.container {
+  position: absolute;
+  background: linear-gradient(#F2E6D0, #FFFFFF, #FFFFFF);
+  height:500px;
+  width: 100%;
+  padding: 20px;
+  margin: 115px auto;
+  border-top: 3px solid #3E4759;
+  border-bottom: 3px solid #3E4759;
+  overflow-y: auto; 
+  /*margin: 145px auto;*/
+}
+
+.container a {
+  text-decoration: none;
+
+}
+
+div.title{
+  display: table-cell;
+  position: absolute;
+  vertical-align: middle;
+  background-color: white;
+  border: 3px solid #3E4759;
+  border-radius: 35%;
+  height: 150px;
+  width: 300px;
+  font-size: 50px;
+  top: 20px;
+  margin: auto 38%;
+}
+
 
 h1 {
   text-align: center;
 }
 
+
+/*===========================================================================================================================
+
+FRONT PAGE
+
+===========================================================================================================================*/
+
 #user {
   display: inline-block;
  /* position: absolute;*/
   float: left;
-  width: 50%;
+  width: 49%;
   text-align: center;
-  height: 100px;
+  height: 300px;
   line-height: 100px;
   white-space: nowrap;
 }
@@ -27,21 +133,43 @@ h1 {
   float: right;
   width: 50%;
   text-align: center;
-  height: 100px;
+  height: 300px;
   line-height: 100px;
+  box-shadow: inset 1px 6px 12px 0px #EBEBEB;
   white-space: nowrap;
 }
 
 #SpecialtySelectionType {
   text-align: center;
 }
-
-.container a {
-  text-decoration: none;
+hr.style17 {
+  border-top: 1px solid #8c8b8b;
+  text-align: center;
+}
+hr.style17:after {
+  content: '§';
+  display: inline-block;
+  position: relative;
+  top: -14px;
+  padding: 0 10px;
+  background: #FFFFFF;
+  color: #8c8b8b;
+  font-size: 18px;
+  -webkit-transform: rotate(60deg);
+  -moz-transform: rotate(60deg);
+  transform: rotate(60deg);
 }
 
-.business-registration label {
+h3{
+  text-align: center;
+  margin: 70px;
+}
+h2{
+  text-align: center;
+  margin: 70px;
+}
+div.business-registration{
   display: block;
-  float: left;
-  width : 150px;    
+  margin: 10px auto;
+  width : 400px;    
 }

@@ -35,10 +35,13 @@ module.exports = function(app) {
         console.log(err);
         res.send({errorMessage: err});
       } else {
+        console.log('what is in req.body?', req.body);
         res.json(req.body);
       }
     });
   });
+
+  // app.saveImage = function(req, res)
 
   app.get('/api/users', function(req, res) {
     User.find({}, function(err, users){

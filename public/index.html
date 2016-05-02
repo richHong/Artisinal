@@ -7,6 +7,7 @@
 
   <!-- CSS -->
   <link rel="stylesheet" type="text/css" href="css/style.css"> <!-- custom styles -->
+  <link href='https://fonts.googleapis.com/css?family=Old+Standard+TT' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="libs/bootstrap/dist/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="libs/jquery/src/jquery.js">
 
@@ -26,11 +27,15 @@
 
 </head>
 <body ng-app="ArtisanApp">
+<div class="main-back">
+  
+<div class="title"><h1><a href="#/">Artisanal</a></h1></div>
 <div class="container">
 
   <!-- Angular Content -->
-  <div ng-view></div>
+  <div ng-view class="try"></div>
+</div>
 
-<footer></footer>
+
 </body>
 </html>
