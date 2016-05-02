@@ -1,4 +1,4 @@
-angular.module('RegCtrl', [])
+angular.module('RegCtrl', ['ngFileUpload'])
 
 // .directive('fileread', function () {
 //   return {
@@ -9,7 +9,7 @@ angular.module('RegCtrl', [])
 //         var reader = new FileReader();
 //         reader.onload = function (loadEvent) {
 //           var fileread = loadEvent.target.result;
-//           // console.log(fileread);
+
 //         }
         
 //         reader.readAsDataURL(changeEvent.target.files[0]);
@@ -30,42 +30,21 @@ angular.module('RegCtrl', [])
   };
 //=================================file upload code====================================================
 
-  $scope.creds = {
-  bucket: "",
-  access_key: "",
-  secret_key: ""
-}
- 
-// $scope.upload = function() {
-//   // Configure The S3 Object 
-//   console.log("!!!!!!!!!===============YOU MADE IT===================!!!!!!!!!!!!!")
-//   AWS.config.update({ accessKeyId: $scope.creds.access_key, secretAccessKey: $scope.creds.secret_key });
-//   AWS.config.region = 'Oregon';
-//   var bucket = new AWS.S3({ params: { Bucket: $scope.creds.bucket } });
-//   if($scope.file) {
-//     var params = { Key: $scope.file.name, ContentType: $scope.file.type, Body: $scope.file, ServerSideEncryption: 'AES256' };
- 
-//     bucket.putObject(params, function(err, data) {
-//       if(err) {
-//         // There Was An Error With Your S3 Config
-//         alert(err.message);
-//         return false;
-//       }
-//       else {
-//         // Success!
-//         alert('Upload Done');
-//       }
-//     })
-//     .on('httpUploadProgress',function(progress) {
-//           // Log Progress Information
-//           console.log(Math.round(progress.loaded / progress.total * 100) + '% done');
-//         });
-//   }
-//   else {
-//     // No File Selected
-//     alert('No File Selected');
-//   }
-// }
+$scope.uploadFile = function($file){
+  RegFactory.upload({
+    url: 'api/files',
+    data: {file : $file}
+  }).then(function(res){
+    console.log('Succes, your file has been uploaded' + ' This is res.data : ', res.data);
+  }, function(res){
+    console.log('Error status: ' + resp.status);
+  }, function(evt){
+    var progressPercentage = parseInt(100.0 * evt.loaded / evt.total);
+      console.log('progress: ' + progressPercentage + '% ' + evt.config.data.file.name);
+  });
+};
+
+
 
   $scope.registerBusiness = function(busName, busSpecialty, busAddress, busPhone, busEmail, busWebsiteLink, busPic, busMenu, busDescription) {
     // $scope.upload();

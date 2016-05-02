@@ -4,7 +4,8 @@ var express = require('express');
 var app = express();
 var mongoose = require('mongoose');
 var bodyParser = require('body-parser');
-// var AWS = require ('aws-sdk');
+var busboyBodyParser = require('busboy-body-parser');
+var AWS = require ('aws-sdk');
 // var keys = require('./config/keys.js');
 var Business  = require('./app/models/bModel.js');
 var User  = require('./app/models/uModel.js');
@@ -29,6 +30,7 @@ var port = process.env.PORT || 3030;
 
 // parse application/vnd.api+json as json
 app.use(bodyParser.json());
+app.use(busboyBodyParser());
 app.use(bodyParser.json({ type: 'application/vnd.api+json' }));
 
 // parse application/x-www-form-urlencoded

@@ -2,7 +2,10 @@
 var Business  = require('./models/bModel.js');
 var User  = require('./models/uModel.js');
 
+
 module.exports = function(app) {
+ 
+
   //get for business model  to retrieve information within Business database
   app.get('/api/business', function(req, res) {
     Business.find({}, function(err, business) {
@@ -40,6 +43,7 @@ module.exports = function(app) {
       }
     });
   });
+
 
   // app.saveImage = function(req, res)
 
