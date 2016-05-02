@@ -15,8 +15,11 @@
     <tt>Item selected: {{selectedType}}</tt>
   </form>
   <div class="business-list" >
-    <ul>
-        <li ng-repeat="item in data.list">{{item.company}}</li>
+    <ul ng-repeat="item in data.list">
+        <li>{{item.company}}</li>
+        <li>{{item.address}}</li>
+        <li>{{item.description}}</li>
+        <li>{{item.link}}</li>
     </ul>
       
   </div>
