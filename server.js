@@ -5,7 +5,6 @@ var app = express();
 var mongoose = require('mongoose');
 var bodyParser = require('body-parser');
 var busboyBodyParser = require('busboy-body-parser');
-var AWS = require ('aws-sdk');
 // var keys = require('./config/keys.js');
 var Business  = require('./app/models/bModel.js');
 var User  = require('./app/models/uModel.js');
@@ -25,7 +24,7 @@ mongoose.connect('mongodb://localhost/Artisanal');
 // PORT------------------------------------------
 var port = process.env.PORT || 3030;
 
-// connect to our mongoDB database		
+// connect to our mongoDB database
 // mongoose.connect(db.url);
 
 // parse application/vnd.api+json as json
