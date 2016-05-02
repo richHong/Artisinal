@@ -56,6 +56,7 @@ nodemon server.js
 3. Map Location: Using the Google Maps API, feature a map in each businesses profile page.
 4. Orders: Businesses can take pick-up orders with a really easy system
 5. User Favorites: Users can save their favorite businesses and visit them with ease from any page in the site.
+6. Search Algorithm: Displaying to the user food purveyors in their local area by default. Artisanal is meant to work for any area in the globe.
 
 ### Roadmap
 
