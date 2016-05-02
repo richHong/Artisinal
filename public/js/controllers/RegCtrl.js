@@ -31,9 +31,9 @@ angular.module('RegCtrl', [])
 //=================================file upload code====================================================
 
   $scope.creds = {
-  bucket: "nightmagicians-artisanal-imageupload",
-  access_key: "AKIAIA4E7J2ZMKOKPGHQ",
-  secret_key: "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"
+  bucket: "",
+  access_key: "",
+  secret_key: ""
 }
  
 $scope.upload = function() {
