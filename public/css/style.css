@@ -59,15 +59,17 @@ table {
 MAIN STYLING
 
 ===========================================================================================================================*/
+
 body{
   overflow: hidden;
 }
 div.main-back{
   position: relative;
-  background-image: url("images/rustic-barn-wood-background-design-decor-3 (1).jpg");
-  background-repeat: no-repeat;
-  height: 900px;
+  height: 1000px;
   width: 100%;
+  background-image: url("images/rustic-barn-wood-background-design-decor-3 (1).jpg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
   font-family: 'Old Standard TT', serif;
 }
 
@@ -78,7 +80,7 @@ div.container {
   height:500px;
   width: 100%;
   padding: 20px;
-  margin: 115px auto;
+  margin: 215px auto;
   border-top: 3px solid #3E4759;
   border-bottom: 3px solid #3E4759;
   overflow-y: auto; 
@@ -100,8 +102,8 @@ div.title{
   height: 150px;
   width: 300px;
   font-size: 50px;
-  top: 20px;
-  margin: auto 38%;
+  top: 120px;
+  margin: auto 43%;
 }
 
 
@@ -172,4 +174,14 @@ div.business-registration{
   display: block;
   margin: 10px auto;
   width : 400px;    
+}
+div.business-profile{
+  display: block;
+  text-align: center;
+}
+#profile-link{
+  position: absolute;
+  bottom: 25px;
+  font-size: 18px;
+  text-decoration: none;
 }
