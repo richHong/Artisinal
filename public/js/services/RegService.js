@@ -2,6 +2,7 @@
 angular.module('RegService', [])
 
 .factory('RegFactory', function($http) {
+  var upload;
 
   console.log('inside factory!!!!');
 
@@ -25,6 +26,7 @@ angular.module('RegService', [])
       return res;
     });
   };
+
 
   var addUser = function(userName, userPassword,fullName, userAddress, userPhone, userEmail, userPic) {
     console.log('inside the addUser function inside services:', fullName);
@@ -56,7 +58,12 @@ angular.module('RegService', [])
   return {
     getBusinesses: getBusinesses,
     addBusiness: addBusiness,
-    addUser: addUser
+    addUser: addUser,
+    upload : function(file){
+            console.log('++++++++++++++++Working maybe? +++++++++++++++++++++++++')
+            return $http.post('/api/files/', file)
+          }
+   
   }
 
 });
