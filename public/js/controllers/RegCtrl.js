@@ -32,10 +32,10 @@ angular.module('RegCtrl', ['ngFileUpload'])
 
 $scope.uploadFile = function($file){
   RegFactory.upload({
-    url: 'api/files'
+    url: 'api/files',
     data: {file : $file}
   }).then(function(res){
-    console.log('Succes, your file has been uploaded' + ' This is res.data : ' res.data);
+    console.log('Succes, your file has been uploaded' + ' This is res.data : ', res.data);
   }, function(res){
     console.log('Error status: ' + resp.status);
   }, function(evt){

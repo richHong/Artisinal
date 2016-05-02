@@ -1,14 +1,10 @@
 // var mongoose = require('mongoose');
 var Business  = require('./models/bModel.js');
 var User  = require('./models/uModel.js');
-// var upload = require();
+
 
 module.exports = function(app) {
-  app.route('/upload/:filename')
-  // .get(upload.read);
-
-  app.route('/upload')
-  // .post(upload.create);
+ 
 
   //get for business model  to retrieve information within Business database
   app.get('/api/business', function(req, res) {
