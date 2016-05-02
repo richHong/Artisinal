@@ -5,7 +5,7 @@ var app = express();
 var mongoose = require('mongoose');
 var bodyParser = require('body-parser');
 var AWS = require ('aws-sdk');
-var keys = require('./config/keys.js');
+// var keys = require('./config/keys.js');
 var Business  = require('./app/models/bModel.js');
 var User  = require('./app/models/uModel.js');
 
