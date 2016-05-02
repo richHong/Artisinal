@@ -1,8 +1,9 @@
-<h1><a href="#/">Artisanal</a></h1>
-
+<!-- <div class="title"><h1><a href="#/">Artisanal</a></h1></div> -->
+<hr class="style17">
+<br>
 <h3>Welcome to the Community! <i><u>Register your Business here:</u></i></h3>
 <div class="business-registration" >
-  <form name="registrationForm" id="business-registration" ng-submit="registerBusiness(busName, busSpecialty, busAddress, busPhone, busEmail, busWebsiteLink, busPic, busMenu, busDescription)">
+  <form name="registrationForm" id="business-registration" ng-submit="registerBusiness(busName, busSpecialty, busAddress, busPhone, busEmail, busWebsiteLink, busPic, busMenu, busDescription)" >
     <div class="form-group">
       <label>Business Name:</label><input type="text" ng-model="busName" ng-required='true' class="form-control" placeholder="Your Business" />
     </div>
@@ -34,7 +35,7 @@
       <label>Web Address:</label><input type="url" ng-model="busWebsiteLink" ng-required='true' class="form-control" placeholder="http://www.example.com"/>
     </div>
     <div class="form-group">
-      <label>Upload Pic:</label><input type="file" class="form-control" name="pic" accept="image/*" ng-model="busPic" />
+      <label>Upload Pic:</label><input type="file" class="form-control" name="pic" accept="image/*" ng-model="busPic" fileread/>
       <small class="text-muted">'.jpg' or '.png' Files</small>
     </div><br>
     <div class="form-group">

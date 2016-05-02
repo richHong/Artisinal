@@ -4,6 +4,8 @@ var express = require('express');
 var app = express();
 var mongoose = require('mongoose');
 var bodyParser = require('body-parser');
+var AWS = require ('aws-sdk');
+var keys = require('./config/keys.js');
 var Business  = require('./app/models/bModel.js');
 var User  = require('./app/models/uModel.js');
 
@@ -12,6 +14,12 @@ mongoose.connect('mongodb://localhost/Artisanal');
 // CONFIG----------------------------------------
 //-----------------------------------------------
 // var db = require('./config/db');
+
+// AWS.config.update({
+//   accessKeyId: Tokens.amazonAccess,
+//   secretAccessKey: Tokens.amazonSecret,
+//   region: Tokens.amazonRegion
+// })
 
 // PORT------------------------------------------
 var port = process.env.PORT || 3030;
