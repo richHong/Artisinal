@@ -65,7 +65,7 @@ body{
 }
 div.main-back{
   position: relative;
-  height: 1000px;
+  height: 1300px;
   width: 100%;
   background-image: url("images/rustic-barn-wood-background-design-decor-3 (1).jpg");
   background-size: 100% 100%;
@@ -77,7 +77,7 @@ div.main-back{
 div.container {
   position: absolute;
   background: linear-gradient(#F2E6D0, #FFFFFF, #FFFFFF);
-  height:500px;
+  height:630px;
   width: 100%;
   padding: 20px;
   margin: 215px auto;
@@ -125,17 +125,22 @@ FRONT PAGE
   float: left;
   width: 49%;
   text-align: center;
-  height: 450px;
+  height: 525px;
+  margin-top: 25px;
   border-radius: 25px;
   line-height: 100px;
   font-size: 65px;
   white-space: nowrap;
 }
 #user a{
-  background-color: #3E4759;
-  border-radius: 15px;
-    padding: 5px;
+  text-decoration: none;
   color: white;
+  background-color: #337AB7;
+  padding-right: 30px;
+  padding-left: 30px;
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-weight: bolder;
 }
 
 #business {
@@ -145,17 +150,22 @@ FRONT PAGE
   float: right;
   width: 50%;
   text-align: center;
+  height: 525px;
+  margin-top: 25px;
   border-radius: 25px;
-  height: 450px;
   line-height: 100px;
   font-size: 65px;
   white-space: nowrap;
 }
 #business a{
-  background-color: #3E4759;
-   border-radius: 15px;
-   padding: 5px;
+  text-decoration: none;
   color: white;
+  background-color: #337AB7;
+  padding-right: 30px;
+  padding-left: 30px;
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-weight: bolder;
 }
 
 
@@ -184,7 +194,11 @@ FRONT PAGE
   font-size: 28px;
   white-space: nowrap;
 }
-
+#greeting-image{
+  height: 250px;
+  width: 250px;
+  border-radius: 90px;
+}
 
 #SpecialtySelectionType {
   text-align: center;
