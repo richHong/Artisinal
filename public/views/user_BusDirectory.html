@@ -16,12 +16,12 @@
     <br>
   </form>
   <div class="business-list" >
-    <ul ng-repeat="item in data.list">
+    <ul ng-repeat="item in data.list | orderBy: 'picture'">
 
         <li><img class="images" ng-src="{{item.picture}}"/></li>
         <li>{{item.company}}</li>
         <li>{{item.phoneNumber}}</li>
-        <li>{{item.address}}</li>
+        <li>{{item.address}}</li><br>
         <li>{{item.description}}</li>
         <li><a href="{{item.link}}">{{item.link}}</a></li>
         <br>

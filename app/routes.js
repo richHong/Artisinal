@@ -1,7 +1,7 @@
 // var mongoose = require('mongoose');
 var Business  = require('./models/bModel.js');
 var User  = require('./models/uModel.js');
-var Busboy = require('busboy');
+// var Busboy = require('busboy');
 
 
 module.exports = function(app) {
@@ -22,7 +22,7 @@ module.exports = function(app) {
       console.log('finish');
     })
   })
- 
+
 
   //get for business model  to retrieve information within Business database
   app.get('/api/business', function(req, res) {
