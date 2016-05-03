@@ -9,10 +9,6 @@ var User  = require('./app/models/uModel.js');
 
 mongoose.connect('mongodb://localhost/Artisanal');
 
-// CONFIG----------------------------------------
-//-----------------------------------------------
-
-
 // PORT------------------------------------------
 var port = process.env.PORT || 3030;
 
@@ -32,7 +28,7 @@ require('./app/routes')(app); // configure our routes
 app.use(express.static(__dirname + '/public'));
 
 // start app ===============================================
-// startup our app at http://localhost:8080
+// startup our app at http://localhost:3030
 app.listen(port);
 
 // shoutout to the user

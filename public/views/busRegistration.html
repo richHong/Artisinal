@@ -1,4 +1,3 @@
-<!-- <div class="title"><h1><a href="#/">Artisanal</a></h1></div> -->
 <hr class="style17">
 <br>
 <h3>Welcome to the Community! <i><u>Register your Business here:</u></i></h3>
@@ -13,8 +12,8 @@
     <div class="form-group">
       <label>Food Specialty:</label><br>
       <select name="singleSelect" id="singleSelect" ng-model="busSpecialty" ng-required="true" class="form-control">
-      <option value="">What is your artisanal specialty?</option> <!-- not selected / blank option -->
-      <option value="Artisanal Cheese">Artisanal Cheese</option> <!-- interpolation -->
+      <option value="">What is your artisanal specialty?</option>
+      <option value="Artisanal Cheese">Artisanal Cheese</option>
       <option value="Bakery">Bakery</option>
       <option value="Cured Meats">Cured Meats</option>
       <option value="Wine and Spirits">Wine and Spirits</option>
@@ -22,7 +21,6 @@
       <option value="Seafood">Seafood</option>
       <option value="Desserts">Desserts</option>
     </select>
-<!--       <input type="text" ng-model="busSpecialty" ng-required='true' class="form-control" placeholder="What is your artisanal specialty?"/> -->
     </div>
     <div class="form-group">
       <label>Business Number:</label><input type="number" ng-model="busPhone" ng-required='true' class="form-control" placeholder="Your Phone Number"/>
@@ -35,7 +33,6 @@
     </div>
     <div class="form-group">
       <label>Upload Pic:</label><input type="file" class="form-control" name="pic" accept="image/*" ng-model="busPic" fileread/>
-      <!-- <img ng-src="data:image/jpg;base64, +{"busPic"}} -->
       <small class="text-muted">'.jpg' or '.png' Files</small>
     </div><br>
     <div class="form-group">
@@ -50,6 +47,5 @@
     </div>
     <p></p>
     <input type="submit" value="submit" ng-disabled="registrationForm.url.$invalid" ng-click="go('/profile')" />
-    <!-- <button><a href="#/profile">To Profile</a></button> -->
   </form>
 </div>
