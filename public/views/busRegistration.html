@@ -35,10 +35,11 @@
     </div>
     <div class="form-group">
       <label>Upload Pic:</label><input type="file" class="form-control" name="pic" accept="image/*" ng-model="busPic" fileread/>
+      <!-- <img ng-src="data:image/jpg;base64, +{"busPic"}} -->
       <small class="text-muted">'.jpg' or '.png' Files</small>
     </div><br>
     <div class="form-group">
-      <label>Upload Menu:</label><input type="file" class="form-control" name="menu" accept="image/*" ng-model="busMenu" />
+      <label>Upload Menu:</label><input type="file" class="form-control" name="menu" accept="image/*" ng-model="busMenu" menuread/>
       <small class="text-muted">In PDF Format</small>
     </div>
     <div class="form-group"><br>

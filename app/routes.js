@@ -1,9 +1,27 @@
 // var mongoose = require('mongoose');
 var Business  = require('./models/bModel.js');
 var User  = require('./models/uModel.js');
+var Busboy = require('busboy');
 
 
 module.exports = function(app) {
+
+  app.post('/api/files', function(req, res, next){
+    console.log('and the call has been successful');
+    var busboy = new Busboy({
+      headers: req.headers
+    });
+
+    busboy.on('error', function(err){
+      console.log(err);
+    });
+    busboy.on('file', function(fieldname, file, filename, encoding, mimetype){
+      db.uploadFile(req.files.file.name);
+    });
+    busboy.on('finish', function(){
+      console.log('finish');
+    })
+  })
  
 
   //get for business model  to retrieve information within Business database

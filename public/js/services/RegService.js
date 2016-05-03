@@ -59,11 +59,7 @@ angular.module('RegService', [])
     getBusinesses: getBusinesses,
     addBusiness: addBusiness,
     addUser: addUser,
-    upload : function(file){
-            console.log('++++++++++++++++Working maybe? +++++++++++++++++++++++++')
-            return $http.post('/api/files/', file)
-          }
-   
+    
   }
 
 });

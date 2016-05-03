@@ -4,8 +4,6 @@ var express = require('express');
 var app = express();
 var mongoose = require('mongoose');
 var bodyParser = require('body-parser');
-var busboyBodyParser = require('busboy-body-parser');
-// var keys = require('./config/keys.js');
 var Business  = require('./app/models/bModel.js');
 var User  = require('./app/models/uModel.js');
 
@@ -13,13 +11,7 @@ mongoose.connect('mongodb://localhost/Artisanal');
 
 // CONFIG----------------------------------------
 //-----------------------------------------------
-// var db = require('./config/db');
 
-// AWS.config.update({
-//   accessKeyId: Tokens.amazonAccess,
-//   secretAccessKey: Tokens.amazonSecret,
-//   region: Tokens.amazonRegion
-// })
 
 // PORT------------------------------------------
 var port = process.env.PORT || 3030;
@@ -29,11 +21,11 @@ var port = process.env.PORT || 3030;
 
 // parse application/vnd.api+json as json
 app.use(bodyParser.json());
-app.use(busboyBodyParser());
-app.use(bodyParser.json({ type: 'application/vnd.api+json' }));
+app.use(bodyParser.json({ limit: '50mb', type: 'application/vnd.api+json' }));
+
 
 // parse application/x-www-form-urlencoded
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.urlencoded({ extended: true, limit: '50mb' }));
 app.use(express.static(__dirname + '/public'));
 // routes ==================================================
 require('./app/routes')(app); // configure our routes

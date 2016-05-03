@@ -17,12 +17,17 @@
   </form>
   <div class="business-list" >
     <ul ng-repeat="item in data.list">
-        <h3>{{item.company}}</h3>
+
+        <li><img class="images" ng-src="{{item.picture}}"/></li>
+        <li>{{item.company}}</li>
+        <li>{{item.phoneNumber}}</li>
         <li>{{item.address}}</li>
         <li>{{item.description}}</li>
-        <li>{{item.link}}</li>
-        <hr>
-      </ul>
-
+        <li><a href="{{item.link}}">{{item.link}}</a></li>
+        <br>
+        <hr class="style2">
+        <br>
+    <br>
+    </ul>
   </div>
 </div>
