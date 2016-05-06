@@ -7,7 +7,7 @@ var bodyParser = require('body-parser');
 var Business  = require('./app/models/bModel.js');
 var User  = require('./app/models/uModel.js');
 
-mongoose.connect('mongodb://localhost/Artisanal');
+mongoose.connect('mongodb://indigozone:indigozone@ds015962.mlab.com:15962/heroku_v75xg8cs');
 
 // PORT------------------------------------------
 var port = process.env.PORT || 3030;
