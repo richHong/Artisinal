@@ -311,6 +311,15 @@ div.business-list li{
 /*footerview*/
 
 .brand-icon{
+  font-family:'Satisfy', cursive;
+  font-weight: 400;
+}
+
+.footer-links{
+  font-family:'Poiret One', cursive;
+  font-weight: 400;
+}
+.copyright{
   font-family:'Poiret One', cursive;
   font-weight: 400;
 }
