@@ -60,10 +60,10 @@ MAIN STYLING
 
 ===========================================================================================================================*/
 
-body{
-  overflow: hidden;
-}
-div.main-back{
+/*body{
+  /*overflow: hidden;*/
+/*}*/
+/*div.main-back{
   position: relative;
   height: 1300px;
   width: 100%;
@@ -71,10 +71,10 @@ div.main-back{
   background-size: 100% 100%;
   background-repeat: no-repeat;
   font-family: 'Old Standard TT', serif;
-}
+}*/
 
 
-div.container {
+/*div.container {
   position: absolute;
   background: linear-gradient(#F2E6D0, #FFFFFF, #FFFFFF);
   height:630px;
@@ -84,7 +84,7 @@ div.container {
   border-top: 3px solid #3E4759;
   border-bottom: 3px solid #3E4759;
   overflow-y: auto;
-  /*margin: 145px auto;*/
+  margin: 145px auto;
 }
 
 .container a {
@@ -109,7 +109,52 @@ div.title{
 
 h1 {
   text-align: center;
+}*/
+
+/*===========================================================================================================================
+
+Navigation and Header
+
+===========================================================================================================================*/
+nav {
+  font-family:'Poiret One', sans-serif;
+  font-weight: 400;
+  padding: 0px;
+  margin-bottom: 0px;
 }
+
+nav a {
+  color:#3b3a36;
+}
+
+li a {
+  color:#3b3a36;
+}
+.icon-wine{
+  size: 300px;
+}
+.navbar-brand {
+  font-family:'Satisfy', cursive;
+  font-weight: 400;
+  font-size: 72px;
+}
+
+form {
+  margin-top: 10px;
+}
+
+.form-inline {
+  float:right;
+}
+
+
+
+
+
+
+
+
+
 
 
 /*===========================================================================================================================
@@ -261,4 +306,11 @@ div.business-list li{
   height: 150px;
   width: 150px;
 
+}
+
+/*footerview*/
+
+.brand-icon{
+  font-family:'Poiret One', cursive;
+  font-weight: 400;
 }

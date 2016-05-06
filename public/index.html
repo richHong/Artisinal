@@ -7,9 +7,12 @@
 
   <!-- CSS -->
   <link rel="stylesheet" type="text/css" href="css/style.css"> <!-- custom styles -->
-  <link href='https://fonts.googleapis.com/css?family=Old+Standard+TT' rel='stylesheet' type='text/css'>
-  <link href='https://fonts.googleapis.com/css?family=Playfair+Display' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Satisfy' rel='stylesheet' type='text/css'>
+  <!-- <link href='https://fonts.googleapis.com/css?family=Old+Standard+TT' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Playfair+Display' rel='stylesheet' type='text/css'> -->
   <link rel="stylesheet" href="libs/bootstrap/dist/css/bootstrap.min.css">
+  <!-- <link rel="stylesheet" href="css/whhg.css"> -->
   <link rel="stylesheet" type="text/css" href="libs/jquery/src/jquery.js">
 
 
@@ -29,16 +32,18 @@
   <script src="js/services/QueryService.js"></script>
 
 </head>
+<header ng-include="'/views/headerandnav/navview.html'"></header>
+
 <body ng-app="ArtisanApp">
-<div class="main-back">
-  
-<div class="title"><h1><a href="#/">Artisanal</a></h1></div>
+<!-- <div class="main-back">
+
+<div class="title"><h1><a href="#/">Artisanal</a></h1></div> -->
 <div class="container">
 
   <!-- Angular Content -->
   <div ng-view class="try"></div>
 </div>
 
-
+<footer ng-include="'/views/Footer/footerview.html'"> </footer>
 </body>
 </html>
