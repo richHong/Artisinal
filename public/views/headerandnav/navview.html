@@ -1,0 +1,24 @@
+<div class="container-fluid">
+  <nav class="navbar navbar-light bg-faded">
+  <a class="navbar-brand" ui-sref="home">Artisanal</a>
+  <ul class="nav navbar-nav">
+    <li class="nav-item active">
+      <a class="nav-link" ui-sref="home">Home<span class="sr-only">(current)</span></a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" ui-sref="#">Merchants</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" ui-sref="#">Favorites</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" ui-sref="#">Settings</a>
+    </li>
+  </ul>
+  <form ng-controller ='search.ctrl'class="form-inline pull-xs-right .navbar-right">
+    <input ng-model ="userQuery" class="form-control" type="text" placeholder="Search">
+    <button ng-click="searchRecipes(userQuery)"class="btn btn-success-outline" type="submit">Search</button>
+  </form>
+</nav>
+</section>
+</div>
