@@ -6,5 +6,6 @@ angular.module('ArtisanApp',
  'RegService',
  'QueryService',
  'UserCtrl',
- 'SearchCtrl'
+ 'SearchCtrl',
+ 'searchResultsCtrl'
  ]);
