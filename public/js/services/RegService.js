@@ -42,8 +42,16 @@ angular.module('RegService', [])
     });
   };
 
+  var getSingleBusiness = function(id) {
+    return $http({
+      method:'POST',
+      url: '/api/business/single',
+      data: {id:id}
+    });
+  };
 
   return {
+    getSingleBusiness:getSingleBusiness,
     getBusinesses: getBusinesses,
     addBusiness: addBusiness,
     addUser: addUser,
