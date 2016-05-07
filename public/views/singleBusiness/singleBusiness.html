@@ -1,0 +1,25 @@
+
+<h1> Cichetteria for the peoples </h1>
+
+<div id="busSingle">
+  <section class="busInfo">
+    <div class="business-profile">
+      <h2 ng-show="data">Welcome, {{ data[data.length-1].company }}!</h2>
+       <img ng-src="{{ data[data.length-1].picture }}"/>
+      <h4>Phone: {{ data[data.length-1].phoneNumber }}</h4>
+      <h4>Address: {{ data[data.length-1].address }}</h4>
+      <h4>Specialty: {{ data[data.length-1].specialty }}</h4>
+      <h4>Description: {{ data[data.length-1].description }}</h4>
+      <h4>Email: {{ data[data.length-1].email }}</h4>
+      <h4>Website: {{ data[data.length-1].link }}</h4>
+      <img ng-src="{{ data[data.length-1].menu}}"/>
+    </div>
+  </section>
+
+  <side class="busExtra single"> 
+    <h2> beautiful map</h2>
+    <div id="map" style="height:200px; width: 300px"></div>
+  </side>
+
+</div>
+
