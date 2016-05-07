@@ -1,7 +1,10 @@
 angular.module('searchResultsCtrl', [])
 
 .controller('searchResultsCtrl', function($scope, $route ,QueryFactory) {
-  QueryFactory.queryType(searchQArr).then(function(){
-    // console.log("hey there handsome", results)
-  })
+  $scope.getResults = function(){
+    console.log("Why am I being called twice?")
+    QueryFactory.queryType(searchQArr).then(function(){
+    })
+  };
+  $scope.getResults();
 });
