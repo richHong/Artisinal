@@ -12,8 +12,6 @@ mongoose.connect('mongodb://indigozone:indigozone@ds015962.mlab.com:15962/heroku
 // PORT------------------------------------------
 var port = process.env.PORT || 3030;
 
-// connect to our mongoDB database
-// mongoose.connect(db.url);
 
 // parse application/vnd.api+json as json
 app.use(bodyParser.json());
