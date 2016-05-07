@@ -1,9 +1,11 @@
 angular.module('ProfileCtrl', [])
 
-.controller('ProfileController', function($scope, RegFactory) {
+.controller('ProfileController', function($scope, $rootScope, RegFactory) {
   $scope.data = {};
+  $scope.id = $rootScope.id;
+
   $scope.displayBusinesses = function() {
-    RegFactory.getBusinesses()
+    RegFactory.getSingleBusiness($scope.id)
       .then(function(data) {
         $scope.data = data.data;
       });

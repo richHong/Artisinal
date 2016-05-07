@@ -1,15 +1,15 @@
 <hr class="style17">
 <br>
 <div class="business-profile">
-<h2 ng-show="data">Welcome, {{ data[data.length-1].company }}!</h2>
- <img ng-src="{{ data[data.length-1].picture }}"/>
-<h4>Phone: {{ data[data.length-1].phoneNumber }}</h4>
-<h4>Address: {{ data[data.length-1].address }}</h4>
-<h4>Specialty: {{ data[data.length-1].specialty }}</h4>
-<h4>Description: {{ data[data.length-1].description }}</h4>
-<h4>Email: {{ data[data.length-1].email }}</h4>
-<h4>Website: {{ data[data.length-1].link }}</h4>
-<img ng-src="{{ data[data.length-1].menu}}"/>
+  <h2 ng-show="data">Welcome, {{ data.company }}!</h2>
+  <img ng-src="{{ data.picture }}"/>
+  <h4>Phone: {{ data.phoneNumber }}</h4>
+  <h4>Address: {{ data.address }}</h4>
+  <h4>Specialty: {{ data.specialty }}</h4>
+  <h4>Description: {{ data.description }}</h4>
+  <h4>Email: {{ data.email }}</h4>
+  <h4>Website: {{ data.link }}</h4>
+  <img ng-src="{{ data.menu}}"/>
 </div>
 <br>
 <a id="profile-link" href="#/busDirectory">Browse Other Businesses</a>
