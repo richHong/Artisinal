@@ -9,11 +9,11 @@ angular.module('RegCtrl', ['ngFileUpload'])
         reader.onload = function (loadEvent) {
           var fileread = loadEvent.target.result;
           scope.data.picture = fileread;
-        }
+        };
         reader.readAsDataURL(changeEvent.target.files[0]);
       });
     }
-  }
+  };
 })
 
 .directive('menuread', function () {
@@ -25,14 +25,14 @@ angular.module('RegCtrl', ['ngFileUpload'])
         reader.onload = function (loadEvent) {
           var menuread = loadEvent.target.result;
           scope.data.menu = menuread;
-        }
+        };
         reader.readAsDataURL(changeEvent.target.files[0]);
       });
     }
-  }
+  };
 })
 
-.controller('RegController', function($scope, $location, RegFactory) {
+.controller('RegController', function($scope, $rootScope, $location, RegFactory) {
   $scope.data = {
     company: '',
     specialty: '',
@@ -49,7 +49,8 @@ angular.module('RegCtrl', ['ngFileUpload'])
     busPic = $scope.data.picture;
     busMenu = $scope.data.menu;
     RegFactory.addBusiness(busName, busSpecialty, busAddress, busPhone, busEmail, busWebsiteLink, busPic, busMenu, busDescription)
-      .then(function() {
+      .then(function(business) {
+        $rootScope.id = business.data._id;
         $location.path('/profile');
       });
   };
