@@ -314,3 +314,21 @@ div.business-list li{
   font-family:'Poiret One', cursive;
   font-weight: 400;
 }
+
+/*********** BUSINESS SINGLE PAGE ************ */
+#busSingle {
+  position: relative;
+  background-color: orange;
+  height: 600px;
+  width: 900px;
+}
+.busInfo {
+float: left;
+  width: 500px;
+  background-color: beige;
+}
+.busExtra {
+  float: right;
+  width: 300px;
+  background-color: beige;
+}
