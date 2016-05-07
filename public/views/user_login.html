@@ -2,19 +2,16 @@
 <br>
 
 <h2>Welcome! Please login below:<h2>
-
-<div class="user_login">
-  <form name="userLogin" ng-submit="loginUser()">
-    <label>Username:</label><input type="text" ng-required="true" placeholder=" username" />
-    <br>
-    <br>
-    <label>Password:</label><input type="text" ng-required="true" placeholder=" password" />
-    <br>
-    <br>
-    <input type="submit" value="Login" />
-  </form>
+<div ng-contoller="UserSelectController">
+  <div class="user_login">
+    <form name="userLogin">
+    <button ng-click="facebook()">Log in with Facebook</button>
+    <button ng-click="google()">Log in with Google</button>
+    <button ng-click="getInfo()">Go to Businesses</button>
+    </form>
+  </div>
 </div>
  <br>
 <div class='user_registration'>
-  <p>Don't have an account, <a href="#/registerUser">click here to register</a> or <a href="#/busDirectory">login as a guest user</a>.</p>
+<a href="#/busDirectory">Login as a guest user</a>.</p>
 </div>
