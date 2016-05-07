@@ -1,8 +1,10 @@
+var searchQArr;
+
 angular.module('SearchCtrl', [])
 
-.controller('search.ctrl', function($scope, QueryFactory) {
+.controller('search.ctrl', function($scope, $location ,QueryFactory) {
   $scope.searchBusinesses = function() {
-    var searchQArr = $scope.userQuery.toLowerCase().split(' ');
-    QueryFactory.queryType(searchQArr);
+    searchQArr = $scope.userQuery.toLowerCase().split(' ');
+    $location.path("/results");
   };
 });

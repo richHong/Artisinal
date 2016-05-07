@@ -1,8 +1,9 @@
+var results = [];
 angular.module('QueryService', [])
 
 .factory('QueryFactory', function($http) {
-  var results = [];
   var queryType = function(type) {
+    // console.log("Hello from queryType")
     // var results = [];
     return $http({
       method: 'GET',
@@ -17,6 +18,7 @@ angular.module('QueryService', [])
           var specialtySplit = resDataObject.specialty.split(' ');
             specialtySplit.forEach(function(specialtyWords){
               if(queryWords === specialtyWords){
+                // console.log(resDataObject)
                 results.push(resDataObject);
               }
             })
@@ -30,6 +32,6 @@ angular.module('QueryService', [])
   };
 
   return {
-    queryType: queryType,
+    queryType: queryType
   };
 });
