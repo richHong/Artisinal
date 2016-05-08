@@ -17,8 +17,8 @@ module.exports = function(app) {
     });
     busboy.on('finish', function(){
       console.log('finish');
-    })
-  })
+    });
+  });
 
   //get for business model  to retrieve information within Business database
   app.get('/api/business', function(req, res) {
@@ -27,6 +27,15 @@ module.exports = function(app) {
       res.send(err);
     }
     res.json(business);
+    });
+  });
+
+  app.post('/api/business/single', function(req, res){
+    Business.findOne({_id:req.body.id}, function(err, business){
+      if(err){
+        res.send(err);
+      }
+      res.json(business);
     });
   });
 
@@ -41,7 +50,7 @@ module.exports = function(app) {
     newBusiness.description = req.body.description,
     newBusiness.picture = req.body.picture,
     newBusiness.menu = req.body.menu,
-    newBusiness.link = req.body.link
+    newBusiness.link = req.body.link;
 
     //save the newly created model into the database
     newBusiness.save(function(err, newBusiness) {
@@ -50,8 +59,7 @@ module.exports = function(app) {
         console.log(err);
         res.send({errorMessage: err});
       } else {
-        console.log('what is in req.body?', req.body);
-        res.json(req.body);
+        res.json(newBusiness);
       }
     });
   });

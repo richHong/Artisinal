@@ -1,9 +1,11 @@
+// Global variable to render in search results page
+var results = [];
+
 angular.module('QueryService', [])
 
 .factory('QueryFactory', function($http) {
-  var results = [];
+  // Querying the Businesses Database
   var queryType = function(type) {
-    // var results = [];
     return $http({
       method: 'GET',
       url: '/api/business',
@@ -30,6 +32,6 @@ angular.module('QueryService', [])
   };
 
   return {
-    queryType: queryType,
+    queryType: queryType
   };
 });
