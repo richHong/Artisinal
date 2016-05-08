@@ -8,4 +8,6 @@ var ArtisanApp = angular.module('ArtisanApp',
  'RegService',
  'QueryService',
  'UserCtrl',
- 'ArtisanApp.FrontCtrl']);
+ 'SearchCtrl',
+ 'searchResultsCtrl'
+ ]);

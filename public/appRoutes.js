@@ -26,8 +26,16 @@ angular.module('appRoutes', [])
       .when('/busGreet', {
         templateUrl: 'views/busGreeting.html'
       })
+      .when('/results', {
+        templateUrl: 'views/searchResultsView.html',
+        controller: 'searchResultsCtrl'
+      })
       .when('/profile', {
         templateUrl: 'views/busProfile.html',
+        controller: 'ProfileController'
+      })
+      .when('/busSingle', {
+        templateUrl: '/views/singleBusiness/singleBusiness.html',
         controller: 'ProfileController'
       });
   }

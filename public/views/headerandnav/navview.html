@@ -15,10 +15,9 @@
       <a class="nav-link" ui-sref="#">Settings</a>
     </li>
   </ul>
-  <!-- Add ng-controller ='search.ctrl' here -->
-  <form class="form-inline pull-xs-right .navbar-right">
+  <form ng-controller='search.ctrl' class="form-inline pull-xs-right .navbar-right">
     <input ng-model ="userQuery" class="form-control" type="text" placeholder="Search">
-    <button ng-click="searchRecipes(userQuery)"class="btn btn-success-outline" type="submit">Search</button>
+    <button ng-click="searchBusinesses()" class="btn btn-success-outline" type="submit">Search</button>
   </form>
 </nav>
 </section>
