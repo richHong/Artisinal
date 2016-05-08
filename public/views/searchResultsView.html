@@ -1,3 +1,8 @@
 <div id="searchResults">
-    <h1>hello World</h1>
+    <div ng-repeat='item in results'>
+      <div>company name: {{item["company"]}}</div>
+      <img src={{item["picture"]}}></img>
+      <div>description: {{item["description"]}}</div>
+    </div>
+
 </div>

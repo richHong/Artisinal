@@ -1,11 +1,12 @@
 angular.module('searchResultsCtrl', [])
 
 .controller('searchResultsCtrl', function($scope, $route ,QueryFactory) {
+  // Fetches the results from the database using the global variable searchQArr
   $scope.getResults = function(){
-    console.log("Why am I being called twice?", searchQArr);
     QueryFactory.queryType(searchQArr).then(function(){
-      console.log("AM I BEING CALLED TWICE")
+      $scope.results = results
     })
   };
-  // $scope.getResults();
+  // Getting the results upon loading the controller
+  $scope.getResults();
 });
