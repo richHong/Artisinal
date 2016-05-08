@@ -1,10 +1,11 @@
+// Global variable to render in search results page
 var results = [];
+
 angular.module('QueryService', [])
 
 .factory('QueryFactory', function($http) {
+  // Querying the Businesses Database
   var queryType = function(type) {
-    console.log("Hello from queryType")
-    // var results = [];
     return $http({
       method: 'GET',
       url: '/api/business',
@@ -17,9 +18,7 @@ angular.module('QueryService', [])
           // splits specialty string into an array
           var specialtySplit = resDataObject.specialty.split(' ');
             specialtySplit.forEach(function(specialtyWords){
-                // console.log(queryWords, specialtyWords);
               if(queryWords === specialtyWords){
-                // console.log(resDataObject)
                 results.push(resDataObject);
               }
             })
