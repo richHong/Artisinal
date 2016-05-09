@@ -1,14 +1,17 @@
 var ArtisanApp = angular.module('ArtisanApp',
 [
-'ngAnimate',
  'ngRoute',
  'appRoutes',
  'ProfileCtrl',
+ 'FrontCtrl',
  'RegCtrl',
  'RegService',
  'RootCtrl',
  'QueryService',
  'UserCtrl',
  'SearchCtrl',
- 'searchResultsCtrl'
+ 'searchResultsCtrl',
+ 'ui.bootstrap',
+ 'ngTouch',
+ 'ngAnimate'
  ]);

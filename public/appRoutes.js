@@ -1,11 +1,11 @@
 angular.module('appRoutes', [])
 
-.config(['$routeProvider',
-  function($routeProvider) {
+.config(['$routeProvider', '$locationProvider',
+  function($routeProvider, $locationProvider) {
     $routeProvider
       .when('/', {
         templateUrl: 'views/frontPage.html',
-        controller: 'FrontController'
+        controller: 'Carousel'
       })
       .when('/user_login', {
         templateUrl: 'views/user_login.html',
@@ -38,5 +38,7 @@ angular.module('appRoutes', [])
         templateUrl: '/views/singleBusiness/singleBusiness.html',
         controller: 'ProfileController'
       });
+
+      $locationProvider.html5Mode(true);
   }
 ]);

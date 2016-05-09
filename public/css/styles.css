@@ -1,0 +1,236 @@
+/*===========================================================================================================================
+
+General styles
+
+===========================================================================================================================*/
+
+body{
+  background-color: #e9ece5;
+}
+/*===========================================================================================================================
+
+Navigation and Header
+
+===========================================================================================================================*/
+nav {
+  font-family:'Poiret One', sans-serif;
+  font-weight: 400;
+  padding: 10px;
+  margin-bottom: 0px;
+  background-color: #f8f8f8;
+}
+
+nav a {
+  color:#3b3a36;
+}
+
+li a {
+  color:#3b3a36;
+}
+
+.navbar-brand {
+  font-family:'Special Elite', cursive;
+  font-weight: 400;
+  font-size: 40px !important;
+}
+.navbar{
+  margin-bottom: 0px !important;
+}
+
+div.col-lg-6{
+  float:right;
+  padding-top: 8px;
+}
+
+h2{
+  font-family: 'Open sans',sans-serif;
+  font-weight: 800;
+}
+
+
+
+p{
+  font-family: 'Open sans',sans-serif;
+  font-weight: 400;
+  color:#e9ece5;
+}
+
+
+
+
+
+/*===========================================================================================================================
+
+Carousel
+
+===========================================================================================================================*/
+
+/* Carousel base class */
+.carousel {
+  height: 500px;
+  margin-bottom: 60px;
+  margin-top: 0px;
+  background-color: #f8f8f8;
+}
+/* Since positioning the image, we need to help out the caption */
+.carousel-caption {
+  z-index: 10;
+  font-family:'Special Elite', cursive;
+  font-weight: 400;
+
+}
+
+/* Declare heights because of positioning of img element */
+.carousel .item {
+  height: 500px;
+  background-color: #777;
+}
+
+.carousel img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  height: 500px;
+}
+
+.carousel-caption p {
+  margin-bottom: 20px;
+  font-size: 21px;
+  line-height: 1.2;
+}
+
+/*===========================================================================================================================
+
+Business Categories (underneath Carousel)
+
+===========================================================================================================================*/
+/*Categories*/
+.otherbiz {
+  margin-top: 150px;
+  padding: 50px;
+  background-color:#3b3a36;
+}
+
+.img-circle {
+  width:200px;
+    height:200px;
+    border-radius:50%;
+    display:block;
+    background-position-y:25%
+}
+
+  img.img-circle {
+  position: relative;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  border: solid 5px #e9ece5;
+}
+
+h3>a{
+  font-family:'Poiret One', sans-serif;
+  font-weight: 400;
+  font-size: 25px;
+  color:#e9ece5;
+
+}
+
+h3 {
+    text-align: center;
+}
+
+/*===========================================================================================================================
+
+featurettes
+
+===========================================================================================================================*/
+.featurette{
+  background-color: #c0dfd9;
+}
+h2.featurette-heading{
+  font-family:'Poiret One', sans-serif;
+  font-weight: 400;
+  font-size: 50px
+}
+
+p.lead{
+  color:#3b3a36;
+  font-family: 'Open sans',sans-serif;
+  font-weight: 400;
+
+}
+
+@media (min-width: 992px) {
+  .featurette-heading {
+    margin-top: 120px;
+  }
+}
+
+.featurette-divider {
+  margin: 10px 0; /* Space out the Bootstrap <hr> more */
+}
+
+/* Thin out the marketing headings */
+.featurette-heading {
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -1px;
+}
+
+@media{(min-width:1200px)
+  .row.featurette {
+    max-width: 970px;
+  }
+}
+
+.row.featurette{
+  padding: 50px;
+}
+
+img.featurette-image.img-responsive.img-circle.center-block{
+  position: relative;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  border: solid 5px #3b3a36;
+  width:300px;
+  height:300px;
+  border-radius:50%;
+  display:block;
+  background-position-y:25%
+}
+
+/*===========================================================================================================================
+
+footer
+
+===========================================================================================================================*/
+footer{
+  padding: 10px;
+}
+span.brand-icon{
+  font-family:'Special Elite', cursive;
+  font-weight: 400;
+  color: #3b3a36 !important;
+}
+
+p.footer-links{
+  font-family:'Poiret One', cursive;
+  font-weight: 400;
+  color: #3b3a36!important;
+}
+span.copyright{
+  font-family:'Poiret One', cursive;
+  font-weight: 400;
+  color: #3b3a36!important;
+}
+p.pull-right{
+  font-family:'Poiret One', cursive;
+  font-weight: 400;
+  color: #3b3a36!important;
+}
+
+.nav, .pagination, .carousel, .panel-title a { cursor: pointer; }

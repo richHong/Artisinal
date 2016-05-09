@@ -1,12 +1,122 @@
-<section ng-controller='FrontCtrl' >
-  <div  class="container slider">
-    <img ng-repeat="slide in slides"  ng-hide="!isCurrentSlideIndex($index)" class="slide" ng-src="{{slide.image}}">
-    <nav class="nav">
-      <div class="wrapper">
-      <ul class="dots">
-      <li class="dot" ng-repeat="slide in slides">
-      <a href="#" ng-class="{'active':isCurrentSlideIndex($index)}" ng-click="setCurrentSlideIndex($index);"> {{slide.description}} </a></li>
-      </ul></div>
-    </nav>
+<!-- Carousel -->
+<div ng-controller="Carousel">
+  <div style="height: 305px">
+    <uib-carousel active="active" interval="myInterval" no-wrap="noWrapSlides">
+      <uib-slide ng-repeat="slide in slides | orderBy: 'id' " index="slide.id">
+        <img ng-src="{{slide.image}}" style="margin:auto;">
+        <div class="carousel-caption">
+          <h2>{{slide.name}}</h2>
+          <p>{{slide.description}}</p>
+        </div>
+      </uib-slide>
+    </uib-carousel>
   </div>
+</div>
+
+<hr class="featurette-divider">
+
+
+<!-- Three columns of text below the carousel -->
+
+
+<section class="otherbiz">
+  <!-- Projects Row -->
+<div class="row">
+  <div class="col-md-4">
+    <a href="#"><img class="img-circle" src="css/images/seafood2.jpg" alt=""></a>
+    <h3>
+      <a href="#">Seafood</a>
+    </h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
+  </div>
+  <div class="col-md-4 portfolio-item">
+    <a href="#"><img class="img-circle" src="css/images/tapas.jpg" alt=""></a>
+    <h3>
+    <a href="#">Cheese and Charcuterie</a>
+    </h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
+  </div>
+  <div class="col-md-4 portfolio-item">
+    <a href="#"><img class="img-circle" src="css/images/butchery.jpg" alt=""></a>
+    <h3>
+    <a href="#">Butchery</a>
+    </h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
+  </div>
+</div>
+<!-- Projects Row -->
+<div class="row">
+<div class="col-md-4">
+  <a href="#"><img class="img-circle" src="css/images/boulangerie.jpg" alt=""></a>
+  <h3>
+    <a href="#">Bakery</a>
+  </h3>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
+</div>
+<div class="col-md-4 portfolio-item">
+  <a href="#"><img class="img-circle" src="css/images/The-Chocolatier.jpg" alt=""></a>
+  <h3>
+  <a href="#">Chocolatier</a>
+  </h3>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
+</div>
+<div class="col-md-4 portfolio-item">
+  <a href="#"><img class="img-circle" src="css/images/spirits.jpg" alt=""></a>
+  <h3>
+  <a href="#">Wine and Spirits</a>
+  </h3>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
+</div>
+</div>
+<!-- Projects Row -->
+<div class="row">
+<div class="col-md-4">
+  <a href="#"><img class="img-circle" src="css/images/coffee_600.jpg" alt=""></a>
+  <h3>
+    <a href="#">Coffee and Tea</a>
+  </h3>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
+</div>
 </section>
+
+
+
+<!-- START THE FEATURETTES -->
+<section class="featurette">
+<div class="row featurette">
+  <div class="col-md-7">
+    <h2 class="featurette-heading">The Bay Area's best distilleries. <span class="text-muted">They'll blow your mind. </span></h2>
+    <p class="lead">The Bay Area is well-known for its wineries. A new crop of local companies have emerged that make small-batch, craft spirits. Take a tour of the Bay Area's best from St. George Spirits to Napa Valley Distillery.</p>
+  </div>
+  <div class="col-md-5">
+    <img class="featurette-image img-responsive img-circle center-block" src="http://media2.fdncms.com/sfweekly/imager/get-ready-for-an-anniversary-celebration-a/u/big/2626223/stgeorgespirits01_byloubustamante.jpg" alt="Generic placeholder image">
+  </div>
+</div>
+
+<hr class="featurette-divider">
+
+<div class="row featurette">
+  <div class="col-md-7 col-md-push-5">
+    <h2 class="featurette-heading">Garden-to-table fare. <span class="text-muted">Keeping it local for the people.</span></h2>
+    <p class="lead">Check out Bottoms Up Community Garden, located in the Lower Bottoms section of West Oakland. Enjoy fare from local chefs and purchase locally grown, organic produce.</p>
+  </div>
+  <div class="col-md-5 col-md-pull-7">
+    <img class="featurette-image img-responsive img-circle center-block" src="http://cdn.gardensalive.com/images/500/8349A.jpg" alt="Generic placeholder image">
+  </div>
+</div>
+
+<hr class="featurette-divider">
+
+<div class="row featurette">
+  <div class="col-md-7">
+    <h2 class="featurette-heading">And lastly, this one. <span class="text-muted">Checkmate.</span></h2>
+    <p class="lead">For over 30 years, Tsar Nicoulai Caviar has sustainably cultivated world-renowned caviar from 100% American White Sturgeon. Treat yourself. </p>
+  </div>
+  <div class="col-md-5">
+    <img class="featurette-image img-responsive img-circle center-block" src="css/images/caviar.jpg" alt="Generic placeholder image">
+  </div>
+</div>
+
+<hr class="featurette-divider">
+</section>
+<!-- /END THE FEATURETTES -->

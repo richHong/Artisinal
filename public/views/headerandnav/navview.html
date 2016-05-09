@@ -1,8 +1,8 @@
-<div class="container-fluid">
-  <nav class="navbar navbar-light bg-faded">
+<div class="container-fullwidth">
+  <nav class="navbar navbar-fixed-top navbar-light bg-faded artNav">
   <a class="navbar-brand" ui-sref="home">Artisanal</a>
   <ul class="nav navbar-nav">
-    <li class="nav-item active">
+    <li class="nav-item">
       <a class="nav-link" ui-sref="home">Home<span class="sr-only">(current)</span></a>
     </li>
     <li class="nav-item">
@@ -15,14 +15,15 @@
       <a class="nav-link" ui-sref="#">Settings</a>
     </li>
   </ul>
-  <form ng-controller='search.ctrl' class="form-inline pull-xs-right .navbar-right">
-    <input ng-model ="userQuery" class="form-control" type="text" placeholder="Search">
-    <button ng-click="searchBusinesses()" class="btn btn-success-outline" type="submit">Search</button>
-    <div ng-controller="RootController">
-      <img id='img' src="{{img}}"/ style='width:40px'>
-      <div id='name'>{{name | capitalizeFirst}}</div>
-    </div>
-  </form>
+
+  <!-- Add ng-controller ='search.ctrl' here -->
+  <div class="col-lg-6">
+    <div class="input-group">
+      <input type="text" class="form-control" placeholder="Search for...">
+  <span class="input-group-btn">
+    <button class="btn btn-default" type="button">Go!</button>
+  </span>
+</div>
+</div>
 </nav>
-</section>
 </div>
