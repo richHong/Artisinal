@@ -24,42 +24,41 @@ angular.module('UserCtrl', [])
   $scope.email = $rootScope.email;
   $scope.img = $rootScope.img;
   $scope.name = $rootScope.name;
-  $scope.service ='';
 
   $scope.facebook = function(){
-    hello('facebook').login({scope:'email'});
-    $scope.service = 'facebook';
-  };
-
-  $scope.google = function(){
-    hello('google').login({scope:'email'});
-    $scope.service = 'google';
-  };
-
-  $scope.getInfo = function(){
-
-    if ($scope.service === 'facebook'){
-      hello('facebook').api('me').then(function(json) {
+    hello('facebook').login({scope:'email'})
+      .then(function(){
+      hello('facebook').api('me')
+        .then(function(json) {
         $rootScope.email = json.email;
         $rootScope.name = json.name;
         $rootScope.img = json.picture;
-      }, function(e) {
-        console.log('Whoops! ' + e.error.message);
-      }).then(function(){
-        $location.path('busDirectory');
-      });
+        $rootScope.refresh();
+        $rootScope.$apply();
+        }, function(e) {
+          console.log('Whoops! ' + e.error.message);
+        });
+    });
+  };
 
-    } else if ($scope.service === 'google'){
-      hello('google').api('me').then(function(json) {
-        $rootScope.email = json.email;
-        $rootScope.name = json.displayName;
-        $rootScope.img = json.picture;
-      }, function(e) {
-        console.log('Whoops! ' + e.error.message);
-      }).then(function(){
-        $location.path('busDirectory');
-      });
-    }
+  // $scope.google = function(callback){
+  //   hello('google').login({scope:'email'})
+  //     .then(function(){
+  //     hello('google').api('me')
+  //       .then(function(json) {
+  //       $rootScope.email = json.email;
+  //       $rootScope.name = json.displayName;
+  //       $rootScope.img = json.picture;
+  //       $rootScope.refresh();
+  //       $rootScope.apply();
+  //       }, function(e) {
+  //         console.log('Whoops! ' + e.error.message);
+  //       });
+  //   });
+  // };
+
+  $scope.getInfo = function(){
+    $location.path('busDirectory');
   };
 
     hello.init({
