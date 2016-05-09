@@ -3,11 +3,18 @@
   "version": "0.0.0",
   "description": "THE hub for local food Artisans and food enthusiasts.",
   "dependencies": {
+    "angular": "^1.5.5",
+    "angular-animate": "^1.5.5",
+    "angular-bootstrap-npm": "^0.14.3",
+    "angular-route": "^1.5.5",
+    "angular-touch": "^1.5.5",
+    "angular-ui-bootstrap": "^1.3.2",
     "body-parser": "^1.4.3",
     "express": "^4.4.5",
+    "jquery": "^2.2.3",
     "mongod": "^1.3.0",
     "mongoose": "^4.4.12",
-    "nodemon": "latest",
-    "ng-file-upload": "^12.0.4"
+    "ng-file-upload": "^12.0.4",
+    "nodemon": "latest"
   }
 }

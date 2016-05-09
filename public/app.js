@@ -1,7 +1,9 @@
-angular.module('ArtisanApp',
-['ngRoute',
+var ArtisanApp = angular.module('ArtisanApp',
+[
+ 'ngRoute',
  'appRoutes',
  'ProfileCtrl',
+ 'FrontCtrl',
  'RegCtrl',
  'RegService',
  'RootCtrl',
@@ -9,5 +11,8 @@ angular.module('ArtisanApp',
  'UserCtrl',
  'SearchCtrl',
  'searchResultsCtrl',
- 'LandingPageCtrl'
+ 'ui.bootstrap',
+ 'ngTouch',
+ 'ngAnimate',
+ // 'LandingPageCtrl'
  ]);
