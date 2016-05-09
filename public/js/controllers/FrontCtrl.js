@@ -55,5 +55,18 @@ angular.module('FrontCtrl', [])
 
   $scope.displayBusinesses();
 
+  $scope.searchBusinesses = function(string) {
+    // console.log('the category is:', string);
+    searchQArr = [string];
+    // Redirects page to results page
+    if($location.path() !== '/results'){
+      $location.path("/results");
+    } else {
+      $route.reload();
+    }
+    
+
+  };
+
 }]);
 
