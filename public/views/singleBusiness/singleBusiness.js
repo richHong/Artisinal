@@ -1,13 +1,15 @@
 var geocoder;
 var map;
-
+var address = business.address;
 // this function creates the map with taking the address as an argument
 // for now, it uses a static address, but it should change once the controller is done
 function geocode() {
-  var address = '3222 25th st. san francisco';
+
+  address = '3222 25th st. san francisco';
   geocoder = new google.maps.Geocoder();
   
   geocoder.geocode( { 'address': address}, function(results, status){
+    var image = '/css/images/map_pins.png';
     if (status == google.maps.GeocoderStatus.OK) {
       map = new google.maps.Map(document.getElementById("map"),{
         zoom: 16,
@@ -16,10 +18,13 @@ function geocode() {
       });
       var marker = new google.maps.Marker({
         map: map,
-        position: results[0].geometry.location
+        position: results[0].geometry.location,
+        icon: image,
+        animation: google.maps.Animation.DROP
       });
     } else {
        alert("Geocode was not successful for the following reason: " + status);
     }
   });
 }
+
