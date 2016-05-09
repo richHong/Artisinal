@@ -37,6 +37,9 @@ angular.module('appRoutes', [])
       .when('/busSingle', {
         templateUrl: '/views/singleBusiness/singleBusiness.html',
         controller: 'ProfileController'
+      })
+      .otherwise({
+        redirectTo: '/'
       });
 
       $locationProvider.html5Mode(true);

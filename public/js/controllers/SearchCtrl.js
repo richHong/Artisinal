@@ -1,9 +1,9 @@
 // Global variable to collect search results
 var searchQArr;
 
-angular.module('SearchCtrl', [])
+angular.module('SearchCtrl', ['ProfileCtrl'])
 
-.controller('search.ctrl', function($scope, $location, $route ,QueryFactory) {
+.controller('search.ctrl', function($scope, $location, $route, $rootScope, QueryFactory) {
   // Takes results and changes all words to lower case and splits all into an array
   $scope.searchBusinesses = function() {
     searchQArr = $scope.userQuery.toLowerCase().split(' ');
@@ -13,6 +13,7 @@ angular.module('SearchCtrl', [])
     } else {
       $route.reload();
     }
+    
 
   };
 });
