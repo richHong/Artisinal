@@ -18,6 +18,10 @@
   <form ng-controller='search.ctrl' class="form-inline pull-xs-right .navbar-right">
     <input ng-model ="userQuery" class="form-control" type="text" placeholder="Search">
     <button ng-click="searchBusinesses()" class="btn btn-success-outline" type="submit">Search</button>
+    <div ng-controller="RootController">
+      <img id='img' src="{{img}}"/ style='width:40px'>
+      <div id='name'>{{name | capitalizeFirst}}</div>
+    </div>
   </form>
 </nav>
 </section>
