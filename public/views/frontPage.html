@@ -3,7 +3,7 @@
   <div style="height: 305px">
     <uib-carousel active="active" interval="myInterval" no-wrap="noWrapSlides">
       <uib-slide ng-repeat="slide in slides | orderBy: 'id' " index="slide.id">
-        <img ng-src="{{slide.image}}" style="margin:auto;">
+        <img ng-click="getSingleBusiness(slide._id, slide.address)"ng-src="{{slide.image}}" style="margin:auto;">
         <div class="carousel-caption">
           <h2>{{slide.name}}</h2>
           <p>{{slide.description}}</p>

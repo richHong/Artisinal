@@ -1,16 +1,17 @@
 angular.module('FrontCtrl', [])
 
-.controller('Carousel', ['$scope', '$animate', '$touch', 'RegFactory',function($scope, $animate, $touch, RegFactory){
+.controller('Carousel', ['$scope', '$animate', '$touch', 'RegFactory', '$rootScope', '$location',function($scope, $animate, $touch, RegFactory, $rootScope, $location){
     $scope.interval = 5000;
     $scope.noWrapSlides = false;
     $scope.active = 0;
     $scope.slides = [
-        {image:'css/images/miette2.jpg', name: 'Miette Bakery', description: "Modern, cheerful, and always delicious, Miette is San Francisco's most charming pastry and confectionery shop.", id: '57310dbd5c208dba06a0cdf8', address: "449 Octavia St, San Francisco, CA"},
-        {image:'css/images/baygrape5.jpg', name:'Bay Grape', description: "Oakland's best boutique wine shop." , id: '57310fa5f68acf250726521a', address: '376 Grand Ave, Oakland, CA 94610'},
-        {image:'css/images/sightglass.jpg', name: 'Sightglass Coffee', description:"Independent, sibling-owned coffee company in San Francisco.", id: '57311017f68acf250726521b', address: '270 7th St, San Francisco, CA 94103'}
+        {image:'css/images/miette2.jpg', name: 'Miette Bakery', description: "Modern, cheerful, and always delicious, Miette is San Francisco's most charming pastry and confectionery shop.", id: 0, _id: '57310dbd5c208dba06a0cdf8', address: "449 Octavia St, San Francisco, CA"},
+        {image:'css/images/baygrape5.jpg', name:'Bay Grape', description: "Oakland's best boutique wine shop." , id:1,
+        _id: '57310fa5f68acf250726521a', address: '376 Grand Ave, Oakland, CA 94610'},
+        {image:'css/images/sightglass.jpg', name: 'Sightglass Coffee', description:"Independent, sibling-owned coffee company in San Francisco.", id: 2, _id: '57311017f68acf250726521b', address: '270 7th St, San Francisco, CA 94103'}
       ];
 
-        $scope.data = {};
+  $scope.data = {};
 
 
   $scope.displayBusinesses = function() {
@@ -26,7 +27,7 @@ angular.module('FrontCtrl', [])
   $scope.getSingleBusiness = function(id, address) {
     $rootScope.id = id;
     $location.path("/busSingle");
-     $scope.map(address);
+    $scope.map(address);
   };
 
   $scope.map = function geocode(address) {
@@ -50,9 +51,9 @@ angular.module('FrontCtrl', [])
          alert("Geocode was not successful for the following reason: " + status);
       }
     });
-  }
+  };
 
   $scope.displayBusinesses();
 
-}])
+}]);
 
