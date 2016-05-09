@@ -16,14 +16,15 @@
     </li>
   </ul>
 
-  <div class="col-lg-6" ng-controller ='search.ctrl'>
-    <div class="input-group">
-      <input type="text" class="form-control" placeholder="Search for..." ng-model="userQuery">
-  <span class="input-group-btn">
-    <button class="btn btn-default" type="button" ng-click="searchBusinesses()">Go!</button>
-  </span>
-
-</div>
-</div>
+  <form ng-controller ="search.ctrl" ng-submit= "searchBusinesses()">
+    <div class="col-lg-6" >
+      <div class="input-group">
+        <input type="text" class="form-control" placeholder="Search for..." ng-model="userQuery">
+        <span class="input-group-btn">
+          <button class="btn btn-default" type="submit" >Go!</button>
+        </span>
+      </div>
+    </div>
+  </form>
 </nav>
 </div>
