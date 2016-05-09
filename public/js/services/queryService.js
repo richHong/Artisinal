@@ -11,6 +11,7 @@ angular.module('QueryService', [])
       url: '/api/business',
     }).then(function(res){
       // if type is an array then the input is coming from the search bar and it is an array
+      results = [];
       if(Array.isArray(type)){
         type.forEach(function (queryWords){
           //iterates thru the results data object

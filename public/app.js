@@ -13,5 +13,6 @@ var ArtisanApp = angular.module('ArtisanApp',
  'searchResultsCtrl',
  'ui.bootstrap',
  'ngTouch',
- 'ngAnimate'
+ 'ngAnimate',
+ 'LandingPageCtrl'
  ]);

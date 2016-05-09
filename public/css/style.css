@@ -1,0 +1,341 @@
+ http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+
+
+
+
+
+
+
+/*===========================================================================================================================
+
+MAIN STYLING
+
+===========================================================================================================================*/
+
+/*body{
+  /*overflow: hidden;*/
+/*}*/
+/*div.main-back{
+  position: relative;
+  height: 1300px;
+  width: 100%;
+  background-image: url("images/rustic-barn-wood-background-design-decor-3 (1).jpg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  font-family: 'Old Standard TT', serif;
+}*/
+
+
+/*div.container {
+  position: absolute;
+  background: linear-gradient(#F2E6D0, #FFFFFF, #FFFFFF);
+  height:630px;
+  width: 100%;
+  padding: 20px;
+  margin: 215px auto;
+  border-top: 3px solid #3E4759;
+  border-bottom: 3px solid #3E4759;
+  overflow-y: auto;
+  margin: 145px auto;
+}
+
+.container a {
+  text-decoration: none;
+
+}
+
+div.title{
+  display: table-cell;
+  position: absolute;
+  vertical-align: middle;
+  background-color: white;
+  border: 3px solid #3E4759;
+  border-radius: 35%;
+  height: 150px;
+  width: 300px;
+  font-size: 50px;
+  top: 120px;
+  margin: auto 43%;
+}
+
+
+h1 {
+  text-align: center;
+}*/
+
+/*===========================================================================================================================
+
+Navigation and Header
+
+===========================================================================================================================*/
+nav {
+  font-family:'Poiret One', sans-serif;
+  font-weight: 400;
+  padding: 0px;
+  margin-bottom: 0px;
+}
+
+nav a {
+  color:#3b3a36;
+}
+
+li a {
+  color:#3b3a36;
+}
+.icon-wine{
+  size: 300px;
+}
+.navbar-brand {
+  font-family:'Satisfy', cursive;
+  font-weight: 400;
+  font-size: 72px;
+}
+
+form {
+  margin-top: 10px;
+}
+
+.form-inline {
+  float:right;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*===========================================================================================================================
+
+FRONT PAGE
+
+===========================================================================================================================*/
+
+#user {
+  display: inline-block;
+  background-image: url("images/artisanjams.jpg");
+ /* position: absolute;*/
+  float: left;
+  width: 49%;
+  text-align: center;
+  height: 525px;
+  margin-top: 25px;
+  border-radius: 25px;
+  line-height: 100px;
+  font-size: 40px;
+  white-space: nowrap;
+}
+#user a{
+  text-decoration: none;
+  color: white;
+  background-color: #337AB7;
+  padding-right: 30px;
+  padding-left: 30px;
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-weight: bolder;
+}
+
+#business {
+  display: inline-block;
+  /*position: absolute;*/
+  background-image: url("images/bread.jpg");
+  float: right;
+  width: 50%;
+  text-align: center;
+  height: 525px;
+  margin-top: 25px;
+  border-radius: 25px;
+  line-height: 100px;
+  font-size: 40px;
+  white-space: nowrap;
+}
+#business a{
+  text-decoration: none;
+  color: white;
+  background-color: #337AB7;
+  padding-right: 30px;
+  padding-left: 30px;
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-weight: bolder;
+}
+
+
+#userG {
+  display: inline-block;
+ /* position: absolute;*/
+  float: left;
+  width: 49%;
+  text-align: center;
+  height: 450px;
+  border-radius: 25px;
+  line-height: 100px;
+  font-size: 28px;
+  white-space: nowrap;
+}
+
+#businessG {
+  display: inline-block;
+  /*position: absolute;*/
+  float: right;
+  width: 50%;
+  text-align: center;
+  border-radius: 25px;
+  height: 450px;
+  line-height: 100px;
+  font-size: 28px;
+  white-space: nowrap;
+}
+#greeting-image{
+  height: 250px;
+  width: 250px;
+  border-radius: 90px;
+}
+
+#SpecialtySelectionType {
+  text-align: center;
+}
+hr.style2 {
+  border-top: 3px double #8c8b8b;
+}
+hr.style17 {
+  border-top: 1px solid #8c8b8b;
+  text-align: center;
+}
+hr.style17:after {
+  content: '§';
+  display: inline-block;
+  position: relative;
+  top: -14px;
+  padding: 0 10px;
+  background: #FFFFFF;
+  color: #8c8b8b;
+  font-size: 18px;
+  -webkit-transform: rotate(60deg);
+  -moz-transform: rotate(60deg);
+  transform: rotate(60deg);
+}
+
+h3{
+  text-align: center;
+  margin: 70px;
+}
+h2{
+  text-align: center;
+  margin: 70px;
+}
+div.business-registration{
+  display: block;
+  margin: 10px auto;
+  width : 400px;
+}
+div.business-profile{
+  display: block;
+  text-align: center;
+  overflow: auto;
+}
+#profile-link{
+  position: absolute;
+  bottom: 25px;
+  font-size: 18px;
+  text-decoration: none;
+}
+div.business-list ul{
+  display: inline;
+}
+div.business-list li{
+  display: inline;
+  margin: 10px;
+}
+
+.images{
+  margin-right: 15px;
+  height: 150px;
+  width: 150px;
+
+}
+
+/*footerview*/
+
+.brand-icon{
+  font-family:'Poiret One', cursive;
+  font-weight: 400;
+}
+
+/*********** BUSINESS SINGLE PAGE ************ */
+#busSingle {
+  position: relative;
+  background-color: orange;
+  height: 600px;
+  width: 900px;
+}
+.busInfo {
+float: left;
+  width: 500px;
+  background-color: beige;
+}
+.busExtra {
+  float: right;
+  width: 300px;
+  background-color: beige;
+}
+
+/* map */
+
+#map {
+  height:200px; 
+  width: 300px;
+}
