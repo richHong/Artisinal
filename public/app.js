@@ -8,5 +8,6 @@ angular.module('ArtisanApp',
  'QueryService',
  'UserCtrl',
  'SearchCtrl',
- 'searchResultsCtrl'
+ 'searchResultsCtrl',
+ 'LandingPageCtrl'
  ]);
