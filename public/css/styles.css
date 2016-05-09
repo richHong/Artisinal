@@ -1,3 +1,53 @@
+http://meyerweb.com/eric/tools/css/reset/
+  v2.0 | 20110126
+  License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+ margin: 0;
+ padding: 0;
+ border: 0;
+ font-size: 100%;
+ font: inherit;
+ vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+ display: block;
+}
+body {
+ line-height: 1;
+}
+ol, ul {
+ list-style: none;
+}
+blockquote, q {
+ quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+ content: '';
+ content: none;
+}
+table {
+ border-collapse: collapse;
+ border-spacing: 0;
+}
+
+
 /*===========================================================================================================================
 
 General styles
@@ -54,10 +104,6 @@ p{
   font-weight: 400;
   color:#e9ece5;
 }
-
-
-
-
 
 /*===========================================================================================================================
 
@@ -205,11 +251,111 @@ img.featurette-image.img-responsive.img-circle.center-block{
 
 /*===========================================================================================================================
 
+User_login
+
+===========================================================================================================================*/
+.userlogin{
+  margin-top: 300px;
+}
+
+h1.brand-login{
+  font-family: 'Marck Script', cursive;
+  font-weight: 700;
+  font-size: 200px;
+  color:#f2b632;
+  text-align: center;
+
+}
+
+h2.form-signin-heading{
+  color:#e9ece5;
+}
+
+span.remember-me{
+  color: #e9ece5;
+}
+.form-signin {
+  max-width: 330px;
+  padding: 15px;
+  margin: 0 auto;
+}
+.form-signin .form-signin-heading,
+.form-signin .checkbox {
+  margin-bottom: 10px;
+}
+.form-signin .checkbox {
+  font-weight: normal;
+}
+.form-signin .form-control {
+  position: relative;
+  height: auto;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 10px;
+  font-size: 16px;
+}
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+.form-signin input[type="username"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.form-signin-heading{
+  font-family:'Special Elite', cursive;
+  font-weight: 400;
+  color:#3b3a36;
+}
+
+.remember-me{
+  color:#3b3a36;
+}
+
+a.already{
+  color:#e9ece5;
+}
+
+
+#login {
+  background:url("images/cheese.jpg")
+  center center;
+  width: 100%;
+  height: 100%;
+  background-size:cover;
+  overflow: hidden;
+}
+
+button.btn.btn-primary.btn-block{
+  font-family:'Poiret One', sans-serif;
+  font-weight: 400;
+  position: relative;
+  display:block;
+  background-color: #3b3a36;
+  border-color: #3b3a36;
+}
+
+button.btn.btn-secondary.btn-lg.biz{
+  width: 300px;
+  margin: 0 auto;
+
+}
+
+/*===========================================================================================================================
+
 footer
 
 ===========================================================================================================================*/
 footer{
   padding: 10px;
+  background-color: #f8f8f8;
 }
 span.brand-icon{
   font-family:'Special Elite', cursive;
@@ -217,10 +363,10 @@ span.brand-icon{
   color: #3b3a36 !important;
 }
 
-p.footer-links{
+p.footer-links>a{
   font-family:'Poiret One', cursive;
   font-weight: 400;
-  color: #3b3a36!important;
+  color: #3b3a36 !important;
 }
 span.copyright{
   font-family:'Poiret One', cursive;
