@@ -332,3 +332,10 @@ float: left;
   width: 300px;
   background-color: beige;
 }
+
+/* map */
+
+#map {
+  height:200px; 
+  width: 300px;
+}

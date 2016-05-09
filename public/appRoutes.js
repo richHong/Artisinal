@@ -4,7 +4,8 @@ angular.module('appRoutes', [])
   function($routeProvider) {
     $routeProvider
       .when('/', {
-        templateUrl: 'views/frontPage.html'
+        templateUrl: 'views/landingPage/landingPage.html',
+        controller: 'LandingPageController'
       })
       .when('/user_login', {
         templateUrl: 'views/user_login.html',
