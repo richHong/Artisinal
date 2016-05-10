@@ -1,3 +1,5 @@
+var geocode;
+
 angular.module('FrontCtrl', [])
 
 .controller('Carousel', ['$scope', '$animate', '$touch', 'RegFactory', '$rootScope', '$location',function($scope, $animate, $touch, RegFactory, $rootScope, $location){
