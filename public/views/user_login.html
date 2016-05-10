@@ -1,17 +1,30 @@
-<hr class="style17">
-<br>
-
-<h2>Welcome! Please login below:<h2>
+<form id="login" name="userLogin">
 <div ng-contoller="UserSelectController">
-  <div class="user_login">
-    <form name="userLogin">
-    <button ng-click="facebook()">Log in with Facebook</button>
-    <!-- <button ng-click="google()">Log in with Google</button> -->
-    <!-- <button ng-click="getInfo()">Go to Businesses</button> -->
-    </form>
-  </div>
+<div class="container">
+  <div class="userlogin">
+    <h3 class="wrong"ng-show="show">Wrong Username and/or Password. Try again!</h3>
+      <form name="signupForm" class="form-signin" ng-submit='login()'>
+        <h2 class="form-signin-heading">Sign In</h2>
+        <label for="inputUsername" class="sr-only">Username</label>
+        <input type="username" id="username" ng-model='username' class="form-control" placeholder="Username" required autofocus>
+        <label for="inputPassword" class="sr-only">Password</label>
+        <input type="password" id="inputPassword" ng-model='password' class="form-control" placeholder="Password" required>
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" value="remember-me"><span class="remember-me">Remember me</span>
+          </label>
+        </div>
+        <button class="btn btn-lg btn-primary btn-block" ng-click='login()'type="submit">Login</button>
+      </form>
+      <a class="already" href="/">Don't have an account? <strong>Continue as guest</strong> ...</a>
+      <p><a class="already" href="/register" ng-click='getInfo()'>Business? <strong>Register Here</strong> ...</a></p>
+      <br>
+      <form name="userLogin">
+      <button class="btn btn-sm btn-secondary" ng-click="facebook()">Login with Facebook</button>
+      <!-- <button ng-click="google()">Log in with Google</button> -->
+      <!-- <button ng-click="getInfo()">Go to Businesses</button> -->
+      </form>
+    </div>
 </div>
- <br>
-<div class='user_registration'>
-<!-- <a href="#/busDirectory">Login as a guest user</a>.</p> -->
 </div>
+</form>
