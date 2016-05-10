@@ -1,14 +1,14 @@
 angular.module('RootCtrl', [])
 .controller('RootController', function($scope, $rootScope){
 
-  $scope.img = $rootScope.img || 'http://wiki.sep7agon.net/images/8/80/Anonymous.png';
+  $scope.img = $rootScope.img || 'https://cdn0.iconfinder.com/data/icons/PRACTIKA/256/user.png';
   $scope.email = $rootScope.email || 'anonymous@anonymous.com';
-  $scope.name = $rootScope.name || 'anonymous';
+  $scope.name = $rootScope.name || 'guest';
 
   $rootScope.refresh = function(){
-    $scope.img = $rootScope.img || 'http://wiki.sep7agon.net/images/8/80/Anonymous.png';
+    $scope.img = $rootScope.img || 'https://cdn0.iconfinder.com/data/icons/PRACTIKA/256/user.png';
     $scope.email = $rootScope.email || 'anonymous@anonymous.com';
-    $scope.name = $rootScope.name || 'anonymous';
+    $scope.name = $rootScope.name || 'guest';
   };
 })
 .filter('capitalizeFirst', function(){

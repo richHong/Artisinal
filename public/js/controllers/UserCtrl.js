@@ -35,6 +35,7 @@ angular.module('UserCtrl', [])
         $rootScope.img = json.picture;
         $rootScope.refresh();
         $rootScope.$apply();
+        $location.path('home');
         }, function(e) {
           console.log('Whoops! ' + e.error.message);
         });
@@ -58,12 +59,12 @@ angular.module('UserCtrl', [])
   // };
 
   $scope.getInfo = function(){
-    $location.path('busDirectory');
+    $location.path('home');
   };
 
     hello.init({
-      facebook: '1139866672723483',
-      google: '451153428162-85vbkkk9gl2ieldm4erfoo8l80foclkc.apps.googleusercontent.com'
-    }, {redirect_uri: 'redirect.html'});
+      facebook: '1139866672723483'
+      // google: '451153428162-85vbkkk9gl2ieldm4erfoo8l80foclkc.apps.googleusercontent.com'
+    });
   
 });

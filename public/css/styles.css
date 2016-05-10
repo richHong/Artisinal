@@ -105,6 +105,12 @@ p{
   color:#e9ece5;
 }
 
+img.nav-link{
+  margin-top: 10px;
+}
+span.name{
+  margin-top: 10px;
+}
 /*===========================================================================================================================
 
 Carousel
@@ -256,8 +262,8 @@ User_login
 
 ===========================================================================================================================*/
 .userlogin{
-  margin-top: 300px;
-  margin-bottom: 250px;
+  margin-top: 250px;
+  margin-bottom: 330px;
 
 }
 
@@ -334,6 +340,7 @@ a.already{
   height: 100%;
   background-size:cover;
   overflow: hidden;
+  /*margin-bottom: 50px;*/
 }
 
 button.btn.btn-primary.btn-block{
@@ -343,6 +350,15 @@ button.btn.btn-primary.btn-block{
   display:block;
   background-color: #3b3a36;
   border-color: #3b3a36;
+}
+button.btn.btn-sm.btn-secondary{
+  font-family:'Poiret One', sans-serif;
+  font-weight: 400;
+  position: relative;
+  display:block;
+  background-color: #3b3a36;
+  border-color: #3b3a36;
+  color:#e9ece5;
 }
 
 /*===========================================================================================================================
