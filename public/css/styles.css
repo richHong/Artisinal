@@ -194,6 +194,7 @@ featurettes
 ===========================================================================================================================*/
 .featurette{
   background-color: #c0dfd9;
+  margin-bottom: 0 !important;
 }
 h2.featurette-heading{
   font-family:'Poiret One', sans-serif;
@@ -256,6 +257,8 @@ User_login
 ===========================================================================================================================*/
 .userlogin{
   margin-top: 300px;
+  margin-bottom: 250px;
+
 }
 
 h1.brand-login{
@@ -342,20 +345,67 @@ button.btn.btn-primary.btn-block{
   border-color: #3b3a36;
 }
 
-button.btn.btn-secondary.btn-lg.biz{
-  width: 300px;
-  margin: 0 auto;
+/*===========================================================================================================================
 
+Registration
+
+===========================================================================================================================*/
+h3.biz-reg{
+  font-family:'Poiret One', sans-serif;
+  font-weight: 400;
+  font-size: 100px;
+  padding-bottom: 30px;
 }
 
+btn.group{
+  margin-top: 100px;
+}
+div.col-xs-4.user-registration{
+  padding: 10px;
+  margin-top:50px;
+  margin-bottom: 210px;
+}
+
+div.col-xs-4{
+  padding: 10px;
+  text-align: justify !important;
+  font-family: 'Open sans',sans-serif;
+  font-weight: 400;
+}
+
+label.col-xs-4{
+  text-align: left !important;
+  font-family: 'Open sans',sans-serif;
+  font-weight: 400;
+}
+
+div.business-registration{
+  margin-top: 100px;
+  margin-bottom: 90px;
+  width: 50% !important;
+  padding-left: 100px;
+}
+
+h3.biz-reg{
+  font-family:'Poiret One', sans-serif;
+  font-weight: 400;
+  font-size: 60px;
+  padding-bottom: 40px;
+}
 /*===========================================================================================================================
 
 footer
 
 ===========================================================================================================================*/
 footer{
-  padding: 10px;
+    background-color: #f8f8f8;
+}
+footer>div.container{
+  width: 100%;
+  clear:both;
   background-color: #f8f8f8;
+  bottom:0;
+  padding:20px;
 }
 span.brand-icon{
   font-family:'Special Elite', cursive;
@@ -364,17 +414,18 @@ span.brand-icon{
 }
 
 p.footer-links>a{
-  font-family:'Poiret One', cursive;
+  font-family: 'Open sans',sans-serif;
   font-weight: 400;
   color: #3b3a36 !important;
+  text-decoration: none;
 }
 span.copyright{
-  font-family:'Poiret One', cursive;
+  font-family: 'Open sans',sans-serif;
   font-weight: 400;
   color: #3b3a36!important;
 }
 p.pull-right{
-  font-family:'Poiret One', cursive;
+  font-family: 'Open sans',sans-serif;
   font-weight: 400;
   color: #3b3a36!important;
 }
