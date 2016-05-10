@@ -234,3 +234,10 @@ p.pull-right{
 }
 
 .nav, .pagination, .carousel, .panel-title a { cursor: pointer; }
+
+/* map */
+
+#map {
+  height:200px; 
+  width: 300px;
+}

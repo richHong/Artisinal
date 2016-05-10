@@ -11,13 +11,13 @@
       <h4>Specialty: {{ data.specialty }}</h4>
       <h4>Description: {{ data.description }}</h4>
       <h4>Email: {{ data.email }}</h4>
-      <h4>Website: {{ data[data.length-1].link }}</h4>
-      <img ng-src="{{ data[data.length-1].menu}}"/>
+      <h4>Website: <a ng-href="{{ data.link }}">{{data.link}}</a></h4>
+      <!-- <img ng-src="{{ data[data.length-1].menu}}"/> -->
     </div>
   </section>
 
   <side class="busExtra single"> 
-    <h2> beautiful map</h2>
+    <h2> Location:</h2>
     <div id="map"></div>
   </side>
 
