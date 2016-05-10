@@ -60,7 +60,7 @@ angular.module('FrontCtrl', [])
     searchQArr = [string];
     // Redirects page to results page
     if($location.path() !== '/results'){
-      $location.path("/results");
+      $location.path("#/results");
     } else {
       $route.reload();
     }
