@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "THE hub for local food Artisans and food enthusiasts.",
   "scripts": {
-    "postinstall": "./node_modules/bower/bin/bower install"
+    "postinstall": "bower install"
   },
   "dependencies": {
     "angular": "^1.5.5",
