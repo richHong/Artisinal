@@ -7,6 +7,7 @@
 
   <!-- CSS -->
   <!-- custom styles -->
+
   <link rel="stylesheet" type="text/css" href="css/styles.css">
   <link rel="stylesheet" type="text/css" href="libs/bootstrap/dist/css/bootstrap.min.css" >
   <link href='https://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
@@ -18,15 +19,13 @@
 <body>
   <div ng-view></div>
 
-<footer ng-include="'/views/Footer/footerview.html'"> </footer>
+<footer ng-include="'/views/footer/footerview.html'"> </footer>
 
 <!--dependencies-->
   <script type="text/javascript"  src="libs/angular/angular.js"></script>
-  <script type="text/javascript"  src="libs/angular-route/angular-route.js"></script>
   <script type="text/javascript"  src="libs/angular-animate/angular-animate.js"></script>
+  <script type="text/javascript"  src="libs/angular-route/angular-route.js"></script>
   <script type="text/javascript"  src="libs/angular-touch/angular-touch.js"></script>
-  <script type="text/javascript"  src="libs/angular-bootstrap/ui-bootstrap.js"></script>
-  <script type="text/javascript"  src="libs/angular-ui-bootstrap/dist/ui-bootstrap.js"></script>
   <script type="text/javascript"  src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/1.3.2/ui-bootstrap-tpls.js"></script>
   <script type="text/javascript"  src="https://code.jquery.com/jquery-2.2.3.js"   integrity="sha256-laXWtGydpwqJ8JA+X9x2miwmaiKhn8tVmOVEigRNtP4="   crossorigin="anonymous"></script>
   <script src="libs/ng-file-upload/ng-file-upload.js"></script>
@@ -36,7 +35,7 @@
   <script src="app.js"></script>
   <script src="appRoutes.js"></script>
   <script src="js/services/RegService.js"></script>
-  <script src="js/services/QueryService.js"></script>
+  <script src="js/services/queryService.js"></script>
   <script src="js/controllers/FrontCtrl.js"></script>
   <script src="js/controllers/searchResultsCtrl.js"></script>
   <script src="js/controllers/SearchCtrl.js"></script>
@@ -46,8 +45,7 @@
   <script src="js/controllers/UserCtrl.js"></script>
 
 <!-- google maps -->
-  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBY5E-O7VSFoHFHbR0YG7bVQ41Z5014dog&callback=geocode"></script>
-  <!-- <script src="/views/singleBusiness/singleBusiness.js"></script> -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBY5E-O7VSFoHFHbR0YG7bVQ41Z5014dog&callback=geocode" async defer ></script>
 
 </body>
 </html>
