@@ -454,3 +454,7 @@ p.pull-right{
   height:200px; 
   width: 300px;
 }
+
+.override {
+  color: black;
+}

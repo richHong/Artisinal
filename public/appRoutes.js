@@ -42,6 +42,5 @@ angular.module('appRoutes', [])
         redirectTo: '/'
       });
 
-      // $locationProvider.html5Mode(true);
   }
 ]);

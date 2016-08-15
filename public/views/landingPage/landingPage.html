@@ -1,10 +1,4 @@
-
-<!-- iterate through businesses -->
-<!-- to filter to the first five
-    <div ng-repeat="business in data | limitTo: 5" class="col-md-4">
--->
 <div ng-repeat="business in data " class="col-md-4">
-  <!-- <div ng-repeat="business in data | limitTo: 5" class="col-md-4"> -->
 
      <img ng-click="getSingleBusiness(business._id, business.address)" class="center" ng-src={{business.picture}}
   

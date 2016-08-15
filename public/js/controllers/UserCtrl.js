@@ -42,29 +42,12 @@ angular.module('UserCtrl', [])
     });
   };
 
-  // $scope.google = function(callback){
-  //   hello('google').login({scope:'email'})
-  //     .then(function(){
-  //     hello('google').api('me')
-  //       .then(function(json) {
-  //       $rootScope.email = json.email;
-  //       $rootScope.name = json.displayName;
-  //       $rootScope.img = json.picture;
-  //       $rootScope.refresh();
-  //       $rootScope.apply();
-  //       }, function(e) {
-  //         console.log('Whoops! ' + e.error.message);
-  //       });
-  //   });
-  // };
-
   $scope.getInfo = function(){
     $location.path('home');
   };
 
     hello.init({
       facebook: '1139866672723483'
-      // google: '451153428162-85vbkkk9gl2ieldm4erfoo8l80foclkc.apps.googleusercontent.com'
     });
   
 });

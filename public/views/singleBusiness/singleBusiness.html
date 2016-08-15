@@ -1,18 +1,15 @@
-
 <h1> Cichetteria for the peoples </h1>
-
 <div id="busSingle">
   <section class="busInfo">
     <div class="business-profile">
-      <h2 ng-show="data">Welcome, {{ data.company }}!</h2>
        <img ng-src="{{ data.picture }}"/>
+      <h2 ng-show="data">Welcome, {{ data.company }}!</h2>
       <h4>Phone: {{ data.phoneNumber }}</h4>
       <h4>Address: {{ data.address }}</h4>
       <h4>Specialty: {{ data.specialty }}</h4>
       <h4>Description: {{ data.description }}</h4>
       <h4>Email: {{ data.email }}</h4>
       <h4>Website: <a ng-href="{{ data.link }}">{{data.link}}</a></h4>
-      <!-- <img ng-src="{{ data[data.length-1].menu}}"/> -->
     </div>
   </section>
 

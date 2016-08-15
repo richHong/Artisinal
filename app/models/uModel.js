@@ -13,7 +13,7 @@ var Users = new Schema({
       unique: true
     },
     picture: String,
-})
+});
 
 //business model complete and exported
  var User =  mongoose.model('User', Users);
