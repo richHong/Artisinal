@@ -9,17 +9,16 @@ angular.module('UserCtrl', [])
   $scope.getBusiness = function() {
     if ($scope.selectedType !== 'Select All Types') {
       QueryFactory.queryType($scope.selectedType)
-        .then(function(res) {
-          $scope.data.list = res;
-        });
+      .then(function(res) {
+        $scope.data.list = res;
+      });
     } else {
       RegFactory.getBusinesses()
-        .then(function(res) {
-          $scope.data.list = res.data;
-        });
+      .then(function(res) {
+        $scope.data.list = res.data;
+      });
     }
   };
-
   //OAuth with hello.js
   $scope.email = $rootScope.email;
   $scope.img = $rootScope.img;
@@ -27,7 +26,7 @@ angular.module('UserCtrl', [])
 
   $scope.facebook = function(){
     hello('facebook').login({scope:'email'})
-      .then(function(){
+    .then(function(){
       hello('facebook').api('me')
         .then(function(json) {
         $rootScope.email = json.email;
@@ -38,16 +37,13 @@ angular.module('UserCtrl', [])
         $location.path('home');
         }, function(e) {
           console.log('Whoops! ' + e.error.message);
-        });
+      });
     });
   };
-
   $scope.getInfo = function(){
     $location.path('home');
   };
-
     hello.init({
       facebook: '1139866672723483'
     });
-  
 });

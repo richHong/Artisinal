@@ -1,7 +1,5 @@
 <div ng-repeat="business in results" class="col-md-4">
-
-  <img ng-click="getSingleBusiness(business._id, business.address)" class="center" ng-src={{business.picture}}
-  
+  <img ng-click="getSingleBusiness(business._id, business.address)" class="center" ng-src={{business.picture}} />
   <p class='override'>{{business.company}}</p>
   <p class='override'>{{business.description}}</p>
   <p class='override'>Address: {{business.address}}</p>

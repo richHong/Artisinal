@@ -19,7 +19,6 @@ angular.module('RegService', [])
   };
 
   var addUser = function(userName, userPassword,fullName, userAddress, userPhone, userEmail, userPic) {
-    console.log('inside the addUser function inside services:', fullName);
     return $http({
       method: 'POST',
       url: '/api/users',
@@ -35,7 +34,6 @@ angular.module('RegService', [])
   };
 
   var getBusinesses = function() {
-    console.log('Businesses grabbed');
     return $http({
       method: 'GET',
       url: '/api/business'

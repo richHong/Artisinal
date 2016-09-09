@@ -12,9 +12,7 @@ angular.module('FrontCtrl', [])
         _id: '57310fa5f68acf250726521a', address: '376 Grand Ave, Oakland, CA 94610'},
         {image:'css/images/sightglass.jpg', name: 'Sightglass Coffee', description:"Independent, sibling-owned coffee company in San Francisco.", id: 2, _id: '57311017f68acf250726521b', address: '270 7th St, San Francisco, CA 94103'}
       ];
-
   $scope.data = {};
-
 
   $scope.displayBusinesses = function() {
     RegFactory.getBusinesses()
@@ -31,7 +29,6 @@ angular.module('FrontCtrl', [])
   };
 
   $scope.map = function geocode(address) {
-
     geocoder = new google.maps.Geocoder();
     geocoder.geocode( { 'address': address}, function(results, status){
       var image = '/css/images/map_pins.png';

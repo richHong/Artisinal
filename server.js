@@ -1,11 +1,11 @@
 // MODULES---------------------------------------
 //-----------------------------------------------
-var express = require('express');
-var app = express();
-var mongoose = require('mongoose');
+var express    = require('express');
+var app        = express();
+var mongoose   = require('mongoose');
 var bodyParser = require('body-parser');
-var Business  = require('./app/models/bModel.js');
-var User  = require('./app/models/uModel.js');
+var Business   = require('./app/models/bModel.js');
+var User       = require('./app/models/uModel.js');
 
 mongoose.connect('mongodb://indigozone:indigozone@ds015962.mlab.com:15962/heroku_v75xg8cs');
 

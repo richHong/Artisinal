@@ -13,7 +13,5 @@ angular.module('SearchCtrl', ['ProfileCtrl'])
     } else {
       $route.reload();
     }
-    
-
   };
 });

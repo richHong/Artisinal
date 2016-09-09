@@ -5,15 +5,12 @@ angular.module('LandingPageCtrl', [])
 .controller('LandingPageController', function($scope, $rootScope, $location, RegFactory) {
   $scope.data = {};
 
-
   $scope.displayBusinesses = function() {
     RegFactory.getBusinesses()
-      .then(function(data) {
-        // console.log('data', data);
-        $scope.data = data.data;
-        business = data.data;
-        // console.log('data after', data)
-      });
+    .then(function(data) {
+      $scope.data = data.data;
+      business = data.data;
+    });
   };
 
   $scope.getSingleBusiness = function(id, address) {
@@ -23,7 +20,6 @@ angular.module('LandingPageCtrl', [])
   };
 
   $scope.map = function geocode(address) {
-
     geocoder = new google.maps.Geocoder();
     geocoder.geocode( { 'address': address}, function(results, status){
       var image = '/css/images/map_pins.png';
@@ -43,7 +39,6 @@ angular.module('LandingPageCtrl', [])
          alert("Geocode was not successful for the following reason: " + status);
       }
     });
-  }
-
+  };
   $scope.displayBusinesses();
 });

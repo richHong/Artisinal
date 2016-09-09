@@ -10,6 +10,5 @@ angular.module('ProfileCtrl', [])
         $scope.data = data.data;
       });
   };
-
   $scope.displayBusinesses();
 });

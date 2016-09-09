@@ -5,7 +5,7 @@ angular.module('searchResultsCtrl', [])
   $scope.getResults = function(){
     QueryFactory.queryType(searchQArr).then(function(){
       $scope.results = results
-    })
+    });
   };
   // Getting the results upon loading the controller
   $scope.getResults();
@@ -37,5 +37,5 @@ angular.module('searchResultsCtrl', [])
          alert("Geocode was not successful for the following reason: " + status);
       }
     });
-  }
+  };
 });

@@ -4,11 +4,9 @@ var User  = require('./models/uModel.js');
 module.exports = function(app) {
 
   app.post('/api/files', function(req, res, next){
-    console.log('and the call has been successful');
     var busboy = new Busboy({
       headers: req.headers
     });
-
     busboy.on('error', function(err){
       console.log(err);
     });
@@ -93,6 +91,6 @@ module.exports = function(app) {
        } else {
         res.json(req.body);
        }
-    })
+    });
   });
 };
